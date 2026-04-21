@@ -259,7 +259,7 @@ export default function App() {
       <footer className="bg-slate-950 text-slate-300">
         <div className="mx-auto max-w-7xl px-6 py-8 md:px-10">
           <div className="flex flex-col gap-3 text-sm md:flex-row md:items-center md:justify-between">
-            <p>© MattChannon.com</p>
+	<p>© {new Date().getFullYear()} MattChannon.com</p>
             <p>Matt Channon for United States Senate</p>
           </div>
           <div className="mt-3 flex flex-col gap-2 text-xs uppercase tracking-[0.14em] text-slate-400 md:flex-row md:items-center md:justify-between">
