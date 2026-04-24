@@ -1,4 +1,6 @@
 export default function App() {
+  const DONATE_URL = 'https://secure.winred.com/matt-channon-for-senate/donate'
+
   return (
     <div id="top" className="min-h-screen bg-white text-slate-900">
       <section className="relative overflow-hidden bg-[#081325] text-white">
@@ -22,7 +24,7 @@ export default function App() {
                 Walk-On for U.S. Senate
               </div>
             </div>
-            <nav className="hidden grid-cols-3 items-start justify-self-end gap-6 md:grid lg:gap-8">
+            <nav className="hidden grid-cols-4 items-start justify-self-end gap-6 md:grid lg:gap-8">
               <a href="#about" className="group min-w-[12rem] text-left">
                 <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
                   Meet Matt
@@ -47,6 +49,14 @@ export default function App() {
                   A New Mexico Original
                 </div>
               </a>
+              <a href={DONATE_URL} target="_blank" rel="noreferrer" className="group min-w-[10.75rem] text-left">
+                <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
+                  Donate
+                </div>
+                <div className="mt-2 text-[10px] font-semibold uppercase leading-none tracking-[0.2em] text-white/70 transition group-hover:text-white/90">
+                  Support the Campaign
+                </div>
+              </a>
             </nav>
           </div>
         </header>
@@ -67,10 +77,12 @@ export default function App() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  href="#movement"
+                  href={DONATE_URL}
+                  target="_blank"
+                  rel="noreferrer"
                   className="rounded-2xl bg-red-700 px-7 py-4 text-base font-extrabold uppercase tracking-[0.14em] text-white shadow-2xl transition hover:-translate-y-0.5 hover:bg-red-600"
                 >
-                  Join the Campaign
+                  Donate
                 </a>
                 <a
                   href="#issues"
@@ -245,10 +257,12 @@ export default function App() {
                   Tell Matt What You Think
                 </a>
                 <a
-                  href="#top"
+                  href={DONATE_URL}
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex rounded-2xl border border-white/30 bg-white/10 px-6 py-3 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:-translate-y-0.5 hover:bg-white/20"
                 >
-                  Stand with Matt
+                  Donate
                 </a>
               </div>
             </div>
@@ -259,7 +273,7 @@ export default function App() {
       <footer className="bg-slate-950 text-slate-300">
         <div className="mx-auto max-w-7xl px-6 py-8 md:px-10">
           <div className="flex flex-col gap-3 text-sm md:flex-row md:items-center md:justify-between">
-	<p>© {new Date().getFullYear()} MattChannon.com</p>
+            <p>© {new Date().getFullYear()} MattChannon.com</p>
             <p>Matt Channon for United States Senate</p>
           </div>
           <div className="mt-3 flex flex-col gap-2 text-xs uppercase tracking-[0.14em] text-slate-400 md:flex-row md:items-center md:justify-between">
