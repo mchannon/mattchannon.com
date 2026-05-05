@@ -1,5 +1,6 @@
 export default function App() {
   const DONATE_URL = 'https://secure.winred.com/matt-channon-for-senate/donate'
+  const BALLOTPEDIA_URL = 'https://ballotpedia.org/Matt_Channon'
 
   return (
     <div id="top" className="min-h-screen bg-white text-slate-900">
@@ -114,20 +115,28 @@ export default function App() {
               </div>
             </div>
 
-            <div className="mx-auto w-full max-w-lg">
-              <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-md">
-                <div className="border-b border-white/10 px-8 py-6">
-                  <div className="text-sm font-bold uppercase tracking-[0.22em] text-red-200">A simple question</div>
-                  <h2 className="mt-3 text-3xl font-black tracking-tight text-white">The last thing we need is six more years of more of the same.</h2>
-                </div>
-                <div className="space-y-5 px-8 py-8 text-base leading-8 text-slate-100">
-                  <p>
-                    Washington is already a mess, and when this chapter ends the cleanup will be even harder. New Mexico needs a senator who knows how to repair broken systems, restore law and order, and help build something better after the noise clears.
+            {/* RIGHT COLUMN — candidate photo + condensed card */}
+            <div className="mx-auto w-full max-w-lg flex flex-col gap-6">
+              {/* Photo */}
+              <div className="overflow-hidden rounded-[2rem] shadow-[0_30px_80px_rgba(0,0,0,0.45)] ring-1 ring-white/15">
+                <img
+                  src="/matt-channon.jpg"
+                  alt="Matt Channon — Republican candidate for U.S. Senate, New Mexico"
+                  className="w-full object-cover"
+                />
+              </div>
+
+              {/* Condensed candidate card */}
+              <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 shadow-xl backdrop-blur-md">
+                <div className="px-8 py-7">
+                  <div className="text-sm font-bold uppercase tracking-[0.22em] text-red-200">Republican • New Mexico</div>
+                  <h2 className="mt-3 text-2xl font-black tracking-tight text-white">
+                    Engineer. Inventor. Entrepreneur. Not a career politician.
+                  </h2>
+                  <p className="mt-4 text-sm leading-7 text-slate-200">
+                    New Mexico has been a one-party state for decades. The cleanup job ahead requires someone who actually knows how to fix broken systems — not someone who helped break them.
                   </p>
-                  <p>
-                    This campaign is about public honesty, economic seriousness, secure communities, and representing the people of this state with competence, clarity, and purpose.
-                  </p>
-                  <div className="rounded-[1.5rem] bg-white/10 p-5 text-sm leading-7 text-white/95 ring-1 ring-white/10">
+                  <div className="mt-5 rounded-[1.25rem] bg-white/10 px-5 py-4 text-sm leading-7 text-white/95 ring-1 ring-white/10">
                     <span className="font-extrabold uppercase tracking-[0.14em] text-red-200">Core promise:</span>{' '}
                     Clean up the mess, fix what is broken, and build a government worth trusting again.
                   </div>
@@ -145,7 +154,7 @@ export default function App() {
               <div className="text-sm font-bold uppercase tracking-[0.24em] text-red-300">Meet Matt</div>
               <h2 className="mt-4 text-4xl font-black tracking-tight">Engineer. Inventor. Uber driver. Dad.</h2>
               <p className="mt-6 text-lg leading-8 text-slate-100">
-                Matt Channon brings a direct style, an engineering mindset, and a builder’s instinct for fixing what is broken. He believes public office should solve problems, serve citizens, and earn back the trust that government has squandered.
+                Matt Channon brings a direct style, an engineering mindset, and a builder's instinct for fixing what is broken. He believes public office should solve problems, serve citizens, and earn back the trust that government has squandered.
               </p>
               <p className="mt-5 text-lg leading-8 text-slate-100">
                 His campaign is rooted in the conviction that New Mexico can be safer, stronger, more productive, and better served by leaders who know how to build instead of merely posture.
@@ -275,6 +284,19 @@ export default function App() {
           <div className="flex flex-col gap-3 text-sm md:flex-row md:items-center md:justify-between">
             <p>© {new Date().getFullYear()} MattChannon.com</p>
             <p>Matt Channon for United States Senate</p>
+            {/* Ballotpedia badge */}
+            <a
+              href={BALLOTPEDIA_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-300 transition hover:border-slate-500 hover:text-white"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7" cy="7" r="6.5" stroke="#94a3b8" strokeWidth="1"/>
+                <circle cx="7" cy="7" r="3" fill="#94a3b8"/>
+              </svg>
+              Featured on Ballotpedia
+            </a>
           </div>
           <div className="mt-3 flex flex-col gap-2 text-xs uppercase tracking-[0.14em] text-slate-400 md:flex-row md:items-center md:justify-between">
             <p>FEC Committee ID: C00947622</p>
