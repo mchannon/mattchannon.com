@@ -102,7 +102,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="mx-auto w-full max-w-lg space-y-4">
+            <div className="mx-auto w-full max-w-lg space-y-4 pt-2">
               {/* KALH Video */}
               <div className="overflow-hidden rounded-[2rem] border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
                 <div className="border-b border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
@@ -120,47 +120,47 @@ export default function App() {
               </div>
 
               {/* Press list — compact, between video and photo */}
-              <div className="rounded-[2rem] border border-white/15 bg-white/10 backdrop-blur-md px-5 py-3">
+              <div className="rounded-[2rem] border border-white/15 bg-white/10 backdrop-blur-md px-5 py-2">
                 <div className="divide-y divide-white/10">
                   <a href="https://www.abqjournal.com/opinion/opinion-talk-of-the-town/3038042" target="_blank" rel="noopener noreferrer"
-                    className="group flex items-baseline justify-between gap-3 py-2.5">
-                    <div className="min-w-0">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 mr-2">Albuquerque Journal</span>
-                      <span className="text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/50">(Albuquerque focus)</span></span>
+                    className="group block py-3 transition hover:opacity-80">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Albuquerque Journal</span>
+                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                    <div className="mt-0.5 text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Albuquerque)</span></div>
                   </a>
                   <a href="https://www.lascrucesbulletin.com/stories/an-engineer-would-build-a-desalination-plant,168697" target="_blank" rel="noopener noreferrer"
-                    className="group flex items-baseline justify-between gap-3 py-2.5">
-                    <div className="min-w-0">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 mr-2">Las Cruces Bulletin</span>
-                      <span className="text-sm font-bold text-white/90 group-hover:text-red-200 transition">An Engineer Would Build a Desalination Plant</span>
+                    className="group block py-3 transition hover:opacity-80">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Las Cruces Bulletin</span>
+                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                    <div className="mt-0.5 text-sm font-bold text-white/90 group-hover:text-red-200 transition">An Engineer Would Build a Desalination Plant</div>
                   </a>
                   <a href="https://www.rdrnews.com/opinion/editorials/new-mexico-deserves-a-republican-who-fights-back/article_da0da58a-1fd5-468c-8f73-b523003b401a.html" target="_blank" rel="noopener noreferrer"
-                    className="group flex items-baseline justify-between gap-3 py-2.5">
-                    <div className="min-w-0">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 mr-2">Roswell Daily Record</span>
-                      <span className="text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/50">(Roswell focus)</span></span>
+                    className="group block py-3 transition hover:opacity-80">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Roswell Daily Record</span>
+                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                    <div className="mt-0.5 text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Roswell)</span></div>
                   </a>
                   <a href="https://www.thechronicle-news.com/raton-pass-isnt-dying-its-waiting-for-the-right-senator/" target="_blank" rel="noopener noreferrer"
-                    className="group flex items-baseline justify-between gap-3 py-2.5">
-                    <div className="min-w-0">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 mr-2">Chronicle-News · Raton</span>
-                      <span className="text-sm font-bold text-white/90 group-hover:text-red-200 transition">Raton Pass Isn't Dying. It's Waiting for the Right Senator.</span>
+                    className="group block py-3 transition hover:opacity-80">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Chronicle-News · Raton</span>
+                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                    <div className="mt-0.5 text-sm font-bold text-white/90 group-hover:text-red-200 transition">Raton Pass Isn't Dying. It's Waiting for the Right Senator.</div>
                   </a>
                   <a href="https://2ndlifemediaalamogordo.town.news/g/alamogordo-nm/post/376066/new-mexico-deserves-republican-who-fights-back-matt-channon" target="_blank" rel="noopener noreferrer"
-                    className="group flex items-baseline justify-between gap-3 py-2.5">
-                    <div className="min-w-0">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 mr-2">Alamogordo Town News</span>
-                      <span className="text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/50">(Alamogordo focus)</span></span>
+                    className="group block py-3 transition hover:opacity-80">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Alamogordo Town News</span>
+                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                    <div className="mt-0.5 text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Alamogordo)</span></div>
                   </a>
                 </div>
               </div>
