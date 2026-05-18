@@ -51,8 +51,8 @@ export default function App() {
           </div>
         </header>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6 pb-24 pt-16 md:px-10 md:pb-32 md:pt-24">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="relative z-10 mx-auto max-w-7xl px-6 pb-24 pt-14 md:px-10 md:pb-32 md:pt-16">
+          <div className="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr]">
             <div>
               <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-white/90 shadow-lg backdrop-blur">
                 New Mexico • Strength • Accountability
@@ -128,7 +128,7 @@ export default function App() {
                       <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Albuquerque Journal</span>
                       <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <div className="mt-0.5 text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Albuquerque)</span></div>
+                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Albuquerque)</span></div>
                   </a>
                   <a href="https://www.lascrucesbulletin.com/stories/an-engineer-would-build-a-desalination-plant,168697" target="_blank" rel="noopener noreferrer"
                     className="group block py-3 transition hover:opacity-80">
@@ -136,7 +136,7 @@ export default function App() {
                       <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Las Cruces Bulletin</span>
                       <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <div className="mt-0.5 text-sm font-bold text-white/90 group-hover:text-red-200 transition">An Engineer Would Build a Desalination Plant</div>
+                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">An Engineer Would Build a Desalination Plant</div>
                   </a>
                   <a href="https://www.rdrnews.com/opinion/editorials/new-mexico-deserves-a-republican-who-fights-back/article_da0da58a-1fd5-468c-8f73-b523003b401a.html" target="_blank" rel="noopener noreferrer"
                     className="group block py-3 transition hover:opacity-80">
@@ -144,7 +144,7 @@ export default function App() {
                       <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Roswell Daily Record</span>
                       <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <div className="mt-0.5 text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Roswell)</span></div>
+                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Roswell)</span></div>
                   </a>
                   <a href="https://www.thechronicle-news.com/raton-pass-isnt-dying-its-waiting-for-the-right-senator/" target="_blank" rel="noopener noreferrer"
                     className="group block py-3 transition hover:opacity-80">
@@ -152,7 +152,7 @@ export default function App() {
                       <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Chronicle-News · Raton</span>
                       <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <div className="mt-0.5 text-sm font-bold text-white/90 group-hover:text-red-200 transition">Raton Pass Isn't Dying. It's Waiting for the Right Senator.</div>
+                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">Raton Pass Isn't Dying. It's Waiting for the Right Senator.</div>
                   </a>
                   <a href="https://2ndlifemediaalamogordo.town.news/g/alamogordo-nm/post/376066/new-mexico-deserves-republican-who-fights-back-matt-channon" target="_blank" rel="noopener noreferrer"
                     className="group block py-3 transition hover:opacity-80">
@@ -160,7 +160,7 @@ export default function App() {
                       <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Alamogordo Town News</span>
                       <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <div className="mt-0.5 text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Alamogordo)</span></div>
+                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Alamogordo)</span></div>
                   </a>
                 </div>
               </div>
