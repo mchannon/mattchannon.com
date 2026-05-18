@@ -110,24 +110,32 @@ export default function App() {
               </div>
             </div>
 
-            <div className="mx-auto w-full max-w-lg">
-              <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-md">
-                <div className="border-b border-white/10 px-8 py-6">
-                  <div className="text-sm font-bold uppercase tracking-[0.22em] text-red-200">A simple question</div>
-                  <h2 className="mt-3 text-3xl font-black tracking-tight text-white">The last thing we need is six more years of more of the same.</h2>
+            <div className="mx-auto w-full max-w-lg space-y-5">
+              {/* KALH Video */}
+              <div className="overflow-hidden rounded-[2rem] border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
+                <div className="border-b border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
+                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-200">KALH Radio Interview · 2026</div>
                 </div>
-                <div className="space-y-5 px-8 py-8 text-base leading-8 text-slate-100">
-                  <p>
-                    Washington is already a mess, and when this chapter ends the cleanup will be even harder. New Mexico needs a senator who knows how to repair broken systems, restore law and order, and help build something better after the noise clears.
-                  </p>
-                  <p>
-                    This campaign is about public honesty, economic seriousness, secure communities, and representing the people of this state with competence, clarity, and purpose.
-                  </p>
-                  <div className="rounded-[1.5rem] bg-white/10 p-5 text-sm leading-7 text-white/95 ring-1 ring-white/10">
-                    <span className="font-extrabold uppercase tracking-[0.14em] text-red-200">Core promise:</span>{' '}
-                    Clean up the mess, fix what is broken, and build a government worth trusting again.
-                  </div>
+                <div className="relative aspect-video w-full">
+                  <iframe
+                    className="absolute inset-0 h-full w-full"
+                    src="https://www.youtube.com/embed/ErTTNl4he14"
+                    title="Matt Channon — KALH Radio Interview, U.S. Senate Candidate New Mexico 2026"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
+              </div>
+              {/* Hackathon photo */}
+              <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 backdrop-blur-md">
+                <div className="border-b border-white/10 px-5 py-3">
+                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-200">🥇 First Place · UNM Lobo Hackathon · Feb 2026</div>
+                </div>
+                <img
+                  src="/breannamatt.png"
+                  alt="Matt Channon and Breanna Barna accepting the $5,000 first place award at the 2025 UNM Lobo Hackathon for ShredLeash"
+                  className="w-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -233,122 +241,56 @@ export default function App() {
             </p>
           </div>
 
-          {/* Op-eds & Media */}
+          {/* Op-eds & Media — editorial list style */}
           <div className="mt-12">
-            <div className="mb-6 text-xs font-bold uppercase tracking-[0.28em] text-slate-400">Op-Eds &amp; Commentary</div>
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <div className="mb-2 text-xs font-bold uppercase tracking-[0.28em] text-slate-400">Published Writing</div>
+            <div className="divide-y divide-slate-100">
 
-              <a
-                href="https://www.abqjournal.com/opinion/opinion-talk-of-the-town/3038042"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col rounded-[2rem] bg-slate-50 p-7 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-blue-900">Albuquerque Journal</div>
-                  <div className="text-xs text-slate-400">May 2026</div>
+              <a href="https://www.abqjournal.com/opinion/opinion-talk-of-the-town/3038042" target="_blank" rel="noopener noreferrer"
+                className="group flex items-baseline justify-between gap-6 py-5 transition hover:bg-slate-50 px-2 -mx-2 rounded-xl">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mr-3">Albuquerque Journal</span>
+                  <span className="text-base font-bold text-slate-900 group-hover:text-red-700 transition">New Mexico Deserves a Republican Who Fights Back</span>
                 </div>
-                <h3 className="mt-3 text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-red-700">
-                  New Mexico Deserves a Republican Who Fights Back
-                </h3>
-                <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">
-                  Published in the Albuquerque Journal. Matt makes the case that New Mexico Republicans need a fighter on the November ballot.
-                </p>
-                <div className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-red-700">Read (paywall) →</div>
+                <span className="shrink-0 text-xs text-slate-400">May 2026</span>
               </a>
 
-              <a
-                href="https://www.rdrnews.com/opinion/editorials/new-mexico-deserves-a-republican-who-fights-back/article_da0da58a-1fd5-468c-8f73-b523003b401a.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col rounded-[2rem] bg-slate-50 p-7 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-blue-900">Roswell Daily Record</div>
-                  <div className="text-xs text-slate-400">May 2026</div>
+              <a href="https://www.rdrnews.com/opinion/editorials/new-mexico-deserves-a-republican-who-fights-back/article_da0da58a-1fd5-468c-8f73-b523003b401a.html" target="_blank" rel="noopener noreferrer"
+                className="group flex items-baseline justify-between gap-6 py-5 transition hover:bg-slate-50 px-2 -mx-2 rounded-xl">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mr-3">Roswell Daily Record</span>
+                  <span className="text-base font-bold text-slate-900 group-hover:text-red-700 transition">New Mexico Deserves a Republican Who Fights Back</span>
                 </div>
-                <h3 className="mt-3 text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-red-700">
-                  New Mexico Deserves a Republican Who Fights Back
-                </h3>
-                <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">
-                  Published in the Roswell Daily Record serving Chaves County and southeastern New Mexico.
-                </p>
-                <div className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-red-700">Read →</div>
+                <span className="shrink-0 text-xs text-slate-400">May 2026</span>
               </a>
 
-              <a
-                href="https://2ndlifemediaalamogordo.town.news/g/alamogordo-nm/post/376066/new-mexico-deserves-republican-who-fights-back-matt-channon"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col rounded-[2rem] bg-slate-50 p-7 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-blue-900">Alamogordo Town News</div>
-                  <div className="text-xs text-slate-400">May 2026</div>
+              <a href="https://2ndlifemediaalamogordo.town.news/g/alamogordo-nm/post/376066/new-mexico-deserves-republican-who-fights-back-matt-channon" target="_blank" rel="noopener noreferrer"
+                className="group flex items-baseline justify-between gap-6 py-5 transition hover:bg-slate-50 px-2 -mx-2 rounded-xl">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mr-3">Alamogordo Town News</span>
+                  <span className="text-base font-bold text-slate-900 group-hover:text-red-700 transition">New Mexico Deserves a Republican Who Fights Back</span>
                 </div>
-                <h3 className="mt-3 text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-red-700">
-                  New Mexico Deserves a Republican Who Fights Back
-                </h3>
-                <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">
-                  Published by 2nd Life Media / Alamogordo Town News serving Otero County and southern New Mexico.
-                </p>
-                <div className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-red-700">Read →</div>
+                <span className="shrink-0 text-xs text-slate-400">May 2026</span>
               </a>
 
-              <a
-                href="https://www.lascrucesbulletin.com/stories/an-engineer-would-build-a-desalination-plant,168697"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col rounded-[2rem] bg-slate-50 p-7 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-md"
-              >
-                <div className="flex items-center justify-between">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-blue-900">Las Cruces Bulletin</div>
-                  <div className="text-xs text-slate-400">2026</div>
+              <a href="https://www.lascrucesbulletin.com/stories/an-engineer-would-build-a-desalination-plant,168697" target="_blank" rel="noopener noreferrer"
+                className="group flex items-baseline justify-between gap-6 py-5 transition hover:bg-slate-50 px-2 -mx-2 rounded-xl">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mr-3">Las Cruces Bulletin</span>
+                  <span className="text-base font-bold text-slate-900 group-hover:text-red-700 transition">An Engineer Would Build a Desalination Plant</span>
                 </div>
-                <h3 className="mt-3 text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-red-700">
-                  An Engineer Would Build a Desalination Plant
-                </h3>
-                <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">
-                  Matt lays out a practical, engineering-driven solution to New Mexico's long-term water crisis — the kind of thinking Washington refuses to apply.
-                </p>
-                <div className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-red-700">Read →</div>
+                <span className="shrink-0 text-xs text-slate-400">2026</span>
               </a>
 
-            </div>
-          </div>
+              <a href="https://www.thechronicle-news.com/raton-pass-isnt-dying-its-waiting-for-the-right-senator/" target="_blank" rel="noopener noreferrer"
+                className="group flex items-baseline justify-between gap-6 py-5 transition hover:bg-slate-50 px-2 -mx-2 rounded-xl">
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mr-3">The Chronicle-News · Raton</span>
+                  <span className="text-base font-bold text-slate-900 group-hover:text-red-700 transition">Raton Pass Isn't Dying. It's Waiting for the Right Senator.</span>
+                </div>
+                <span className="shrink-0 text-xs text-slate-400">2026</span>
+              </a>
 
-          {/* Radio / Video — featured embed */}
-          <div className="mt-14">
-            <div className="mb-6 text-xs font-bold uppercase tracking-[0.28em] text-slate-400">Radio &amp; Broadcast</div>
-            <div className="overflow-hidden rounded-[2rem] bg-[#0b1a31] text-white shadow-xl">
-              <div className="grid lg:grid-cols-[1fr_0.85fr]">
-                <div className="relative aspect-video w-full lg:aspect-auto lg:min-h-[320px]">
-                  <iframe
-                    className="absolute inset-0 h-full w-full rounded-t-[2rem] lg:rounded-l-[2rem] lg:rounded-tr-none"
-                    src="https://www.youtube.com/embed/ErTTNl4he14"
-                    title="Matt Channon — KALH Radio Interview, U.S. Senate Candidate New Mexico 2026"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-                <div className="flex flex-col justify-center p-8 lg:p-10">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-300">KALH Radio • 2026</div>
-                  <h3 className="mt-3 text-2xl font-black leading-snug tracking-tight md:text-3xl">
-                    Candidate Interview
-                  </h3>
-                  <p className="mt-4 text-base leading-8 text-slate-300">
-                    Matt joined KALH Radio to discuss his campaign, his platform, and why New Mexico needs an engineer — not another career politician — in the United States Senate.
-                  </p>
-                  <a
-                    href="https://www.youtube.com/watch?v=ErTTNl4he14"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-6 inline-flex w-fit items-center gap-2 rounded-2xl bg-red-700 px-5 py-3 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-red-600"
-                  >
-                    Watch on YouTube →
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
 
