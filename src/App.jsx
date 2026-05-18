@@ -1,7 +1,4 @@
 export default function App() {
-  const DONATE_URL = 'https://secure.winred.com/matt-channon-for-senate/donate'
-  const BALLOTPEDIA_URL = 'https://ballotpedia.org/Matt_Channon'
-
   return (
     <div id="top" className="min-h-screen bg-white text-slate-900">
       <section className="relative overflow-hidden bg-[#081325] text-white">
@@ -26,7 +23,7 @@ export default function App() {
               </div>
             </div>
             <nav className="hidden grid-cols-4 items-start justify-self-end gap-6 md:grid lg:gap-8">
-              <a href="#about" className="group min-w-[12rem] text-left">
+              <a href="#about" className="group min-w-[10rem] text-left">
                 <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
                   Meet Matt
                 </div>
@@ -34,7 +31,7 @@ export default function App() {
                   Engineer • Inventor • <span className="whitespace-nowrap">Uber Driver</span> • <span className="whitespace-nowrap">Dad</span>
                 </div>
               </a>
-              <a href="#issues" className="group min-w-[10.75rem] text-left">
+              <a href="#issues" className="group min-w-[9rem] text-left">
                 <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
                   Priorities
                 </div>
@@ -42,20 +39,20 @@ export default function App() {
                   Fix What Is Broken
                 </div>
               </a>
-              <a href="#movement" className="group min-w-[10.75rem] text-left">
+              <a href="#press" className="group min-w-[9rem] text-left">
+                <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
+                  Press
+                </div>
+                <div className="mt-2 text-[10px] font-semibold uppercase leading-none tracking-[0.2em] text-white/70 transition group-hover:text-white/90">
+                  In the News
+                </div>
+              </a>
+              <a href="#movement" className="group min-w-[9rem] text-left">
                 <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
                   Get Involved
                 </div>
                 <div className="mt-2 text-[10px] font-semibold uppercase leading-none tracking-[0.2em] text-white/70 transition group-hover:text-white/90">
                   A New Mexico Original
-                </div>
-              </a>
-              <a href={DONATE_URL} target="_blank" rel="noreferrer" className="group min-w-[10.75rem] text-left">
-                <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
-                  Donate
-                </div>
-                <div className="mt-2 text-[10px] font-semibold uppercase leading-none tracking-[0.2em] text-white/70 transition group-hover:text-white/90">
-                  Support the Campaign
                 </div>
               </a>
             </nav>
@@ -78,12 +75,10 @@ export default function App() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  href={DONATE_URL}
-                  target="_blank"
-                  rel="noreferrer"
+                  href="#movement"
                   className="rounded-2xl bg-red-700 px-7 py-4 text-base font-extrabold uppercase tracking-[0.14em] text-white shadow-2xl transition hover:-translate-y-0.5 hover:bg-red-600"
                 >
-                  Donate
+                  Join the Campaign
                 </a>
                 <a
                   href="#issues"
@@ -115,28 +110,20 @@ export default function App() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN — candidate photo + condensed card */}
-            <div className="mx-auto w-full max-w-lg flex flex-col gap-6">
-              {/* Photo */}
-              <div className="overflow-hidden rounded-[2rem] shadow-[0_30px_80px_rgba(0,0,0,0.45)] ring-1 ring-white/15">
-                <img
-                  src="/matt-channon.jpg"
-                  alt="Matt Channon — Republican candidate for U.S. Senate, New Mexico"
-                  className="w-full object-cover"
-                />
-              </div>
-
-              {/* Condensed candidate card */}
-              <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 shadow-xl backdrop-blur-md">
-                <div className="px-8 py-7">
-                  <div className="text-sm font-bold uppercase tracking-[0.22em] text-red-200">Republican • New Mexico</div>
-                  <h2 className="mt-3 text-2xl font-black tracking-tight text-white">
-                    Engineer. Inventor. Entrepreneur. Not a career politician.
-                  </h2>
-                  <p className="mt-4 text-sm leading-7 text-slate-200">
-                    New Mexico has been a one-party state for decades. The cleanup job ahead requires someone who actually knows how to fix broken systems — not someone who helped break them.
+            <div className="mx-auto w-full max-w-lg">
+              <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 shadow-[0_30px_80px_rgba(0,0,0,0.35)] backdrop-blur-md">
+                <div className="border-b border-white/10 px-8 py-6">
+                  <div className="text-sm font-bold uppercase tracking-[0.22em] text-red-200">A simple question</div>
+                  <h2 className="mt-3 text-3xl font-black tracking-tight text-white">The last thing we need is six more years of more of the same.</h2>
+                </div>
+                <div className="space-y-5 px-8 py-8 text-base leading-8 text-slate-100">
+                  <p>
+                    Washington is already a mess, and when this chapter ends the cleanup will be even harder. New Mexico needs a senator who knows how to repair broken systems, restore law and order, and help build something better after the noise clears.
                   </p>
-                  <div className="mt-5 rounded-[1.25rem] bg-white/10 px-5 py-4 text-sm leading-7 text-white/95 ring-1 ring-white/10">
+                  <p>
+                    This campaign is about public honesty, economic seriousness, secure communities, and representing the people of this state with competence, clarity, and purpose.
+                  </p>
+                  <div className="rounded-[1.5rem] bg-white/10 p-5 text-sm leading-7 text-white/95 ring-1 ring-white/10">
                     <span className="font-extrabold uppercase tracking-[0.14em] text-red-200">Core promise:</span>{' '}
                     Clean up the mess, fix what is broken, and build a government worth trusting again.
                   </div>
@@ -235,6 +222,171 @@ export default function App() {
         </div>
       </section>
 
+      {/* ── PRESS & RECOGNITION ─────────────────────────────────────────── */}
+      <section id="press" className="bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+          <div className="max-w-3xl">
+            <div className="text-sm font-bold uppercase tracking-[0.24em] text-red-700">Press &amp; Recognition</div>
+            <h2 className="mt-4 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">In the News</h2>
+            <p className="mt-6 text-lg leading-8 text-slate-700">
+              Matt Channon, Republican candidate for U.S. Senate in New Mexico, has been published in newspapers across the state and recognized for his work as an engineer and inventor.
+            </p>
+          </div>
+
+          {/* Op-eds & Media */}
+          <div className="mt-12">
+            <div className="mb-6 text-xs font-bold uppercase tracking-[0.28em] text-slate-400">Op-Eds &amp; Commentary</div>
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+
+              <a
+                href="https://www.abqjournal.com/opinion/opinion-talk-of-the-town/3038042"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col rounded-[2rem] bg-slate-50 p-7 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-blue-900">Albuquerque Journal</div>
+                  <div className="text-xs text-slate-400">May 2026</div>
+                </div>
+                <h3 className="mt-3 text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-red-700">
+                  New Mexico Deserves a Republican Who Fights Back
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">
+                  Published in the Albuquerque Journal. Matt makes the case that New Mexico Republicans need a fighter on the November ballot.
+                </p>
+                <div className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-red-700">Read (paywall) →</div>
+              </a>
+
+              <a
+                href="https://www.rdrnews.com/opinion/editorials/new-mexico-deserves-a-republican-who-fights-back/article_da0da58a-1fd5-468c-8f73-b523003b401a.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col rounded-[2rem] bg-slate-50 p-7 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-blue-900">Roswell Daily Record</div>
+                  <div className="text-xs text-slate-400">May 2026</div>
+                </div>
+                <h3 className="mt-3 text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-red-700">
+                  New Mexico Deserves a Republican Who Fights Back
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">
+                  Published in the Roswell Daily Record serving Chaves County and southeastern New Mexico.
+                </p>
+                <div className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-red-700">Read →</div>
+              </a>
+
+              <a
+                href="https://2ndlifemediaalamogordo.town.news/g/alamogordo-nm/post/376066/new-mexico-deserves-republican-who-fights-back-matt-channon"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col rounded-[2rem] bg-slate-50 p-7 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-blue-900">Alamogordo Town News</div>
+                  <div className="text-xs text-slate-400">May 2026</div>
+                </div>
+                <h3 className="mt-3 text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-red-700">
+                  New Mexico Deserves a Republican Who Fights Back
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">
+                  Published by 2nd Life Media / Alamogordo Town News serving Otero County and southern New Mexico.
+                </p>
+                <div className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-red-700">Read →</div>
+              </a>
+
+              <a
+                href="https://www.lascrucesbulletin.com/stories/an-engineer-would-build-a-desalination-plant,168697"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col rounded-[2rem] bg-slate-50 p-7 shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-blue-900">Las Cruces Bulletin</div>
+                  <div className="text-xs text-slate-400">2026</div>
+                </div>
+                <h3 className="mt-3 text-lg font-black leading-snug tracking-tight text-slate-900 group-hover:text-red-700">
+                  An Engineer Would Build a Desalination Plant
+                </h3>
+                <p className="mt-3 flex-1 text-sm leading-7 text-slate-600">
+                  Matt lays out a practical, engineering-driven solution to New Mexico's long-term water crisis — the kind of thinking Washington refuses to apply.
+                </p>
+                <div className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-red-700">Read →</div>
+              </a>
+
+            </div>
+          </div>
+
+          {/* Radio / Video — featured embed */}
+          <div className="mt-14">
+            <div className="mb-6 text-xs font-bold uppercase tracking-[0.28em] text-slate-400">Radio &amp; Broadcast</div>
+            <div className="overflow-hidden rounded-[2rem] bg-[#0b1a31] text-white shadow-xl">
+              <div className="grid lg:grid-cols-[1fr_0.85fr]">
+                <div className="relative aspect-video w-full lg:aspect-auto lg:min-h-[320px]">
+                  <iframe
+                    className="absolute inset-0 h-full w-full rounded-t-[2rem] lg:rounded-l-[2rem] lg:rounded-tr-none"
+                    src="https://www.youtube.com/embed/ErTTNl4he14"
+                    title="Matt Channon — KALH Radio Interview, U.S. Senate Candidate New Mexico 2026"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="flex flex-col justify-center p-8 lg:p-10">
+                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-300">KALH Radio • 2026</div>
+                  <h3 className="mt-3 text-2xl font-black leading-snug tracking-tight md:text-3xl">
+                    Candidate Interview
+                  </h3>
+                  <p className="mt-4 text-base leading-8 text-slate-300">
+                    Matt joined KALH Radio to discuss his campaign, his platform, and why New Mexico needs an engineer — not another career politician — in the United States Senate.
+                  </p>
+                  <a
+                    href="https://www.youtube.com/watch?v=ErTTNl4he14"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-flex w-fit items-center gap-2 rounded-2xl bg-red-700 px-5 py-3 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:bg-red-600"
+                  >
+                    Watch on YouTube →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Recognition */}
+          <div className="mt-14">
+            <div className="mb-6 text-xs font-bold uppercase tracking-[0.28em] text-slate-400">Recognition</div>
+            <div className="overflow-hidden rounded-[2rem] bg-[#0b1a31] text-white shadow-xl">
+              <div className="grid lg:grid-cols-[auto_1fr]">
+                <div className="flex items-center justify-center bg-black/20 p-6 lg:p-8">
+                  <img
+                    src="/breannamatt.png"
+                    alt="Matt Channon and Breanna Barna accepting the First Place $5,000 award at the 2025 UNM Lobo Hackathon for ShredLeash"
+                    className="w-full max-w-[220px] rounded-[1.25rem] object-cover shadow-2xl lg:max-w-[260px]"
+                  />
+                </div>
+                <div className="flex flex-col justify-center p-8 lg:p-10">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-300">UNM Rainforest Innovations</div>
+                    <div className="text-xs text-white/50">Feb 17, 2026</div>
+                  </div>
+                  <div className="mt-3 inline-flex w-fit items-center rounded-full bg-red-700 px-4 py-1.5 text-xs font-black uppercase tracking-[0.2em] text-white shadow">
+                    🥇 First Place
+                  </div>
+                  <h3 className="mt-4 text-2xl font-black leading-snug tracking-tight md:text-3xl">
+                    2025 Lobo Hackathon — $5,000 Grand Prize
+                  </h3>
+                  <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300">
+                    Matt Channon and co-inventor Breanna Barna took first place out of the entire field at the University of New Mexico's annual Lobo Hackathon for <strong className="text-white">ShredLeash</strong>, a snowboard safety leash system. Sponsored by UNM's Anderson School of Management, School of Engineering, Health Sciences, and Rainforest Innovations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      {/* ── END PRESS ───────────────────────────────────────────────────── */}
+
       <section id="movement" className="relative overflow-hidden bg-[#0a1730] text-white">
         <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(185,28,28,0.18),transparent_32%,transparent_68%,rgba(29,78,216,0.16))]" />
         <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
@@ -266,12 +418,10 @@ export default function App() {
                   Tell Matt What You Think
                 </a>
                 <a
-                  href={DONATE_URL}
-                  target="_blank"
-                  rel="noreferrer"
+                  href="#top"
                   className="inline-flex rounded-2xl border border-white/30 bg-white/10 px-6 py-3 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:-translate-y-0.5 hover:bg-white/20"
                 >
-                  Donate
+                  Stand with Matt
                 </a>
               </div>
             </div>
@@ -282,21 +432,8 @@ export default function App() {
       <footer className="bg-slate-950 text-slate-300">
         <div className="mx-auto max-w-7xl px-6 py-8 md:px-10">
           <div className="flex flex-col gap-3 text-sm md:flex-row md:items-center md:justify-between">
-            <p>© {new Date().getFullYear()} MattChannon.com</p>
-            <p>Matt Channon for United States Senate</p>
-            {/* Ballotpedia badge */}
-            <a
-              href={BALLOTPEDIA_URL}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-300 transition hover:border-slate-500 hover:text-white"
-            >
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="7" cy="7" r="6.5" stroke="#94a3b8" strokeWidth="1"/>
-                <circle cx="7" cy="7" r="3" fill="#94a3b8"/>
-              </svg>
-              Featured on Ballotpedia
-            </a>
+            <p>© MattChannon.com</p>
+            <p>Matt Channon for United States Senate — New Mexico</p>
           </div>
           <div className="mt-3 flex flex-col gap-2 text-xs uppercase tracking-[0.14em] text-slate-400 md:flex-row md:items-center md:justify-between">
             <p>FEC Committee ID: C00947622</p>
