@@ -22,7 +22,7 @@ export default function App() {
                 Walk-On for U.S. Senate
               </div>
             </div>
-            <nav className="hidden grid-cols-4 items-start justify-self-end gap-6 md:grid lg:gap-8">
+            <nav className="hidden grid-cols-3 items-start justify-self-end gap-6 md:grid lg:gap-8">
               <a href="#about" className="group min-w-[10rem] text-left">
                 <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
                   Meet Matt
@@ -37,14 +37,6 @@ export default function App() {
                 </div>
                 <div className="mt-2 text-[10px] font-semibold uppercase leading-none tracking-[0.2em] text-white/70 transition group-hover:text-white/90">
                   Fix What Is Broken
-                </div>
-              </a>
-              <a href="#press" className="group min-w-[9rem] text-left">
-                <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
-                  Press
-                </div>
-                <div className="mt-2 text-[10px] font-semibold uppercase leading-none tracking-[0.2em] text-white/70 transition group-hover:text-white/90">
-                  In the News
                 </div>
               </a>
               <a href="#movement" className="group min-w-[9rem] text-left">
@@ -110,7 +102,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="mx-auto w-full max-w-lg space-y-5">
+            <div className="mx-auto w-full max-w-lg space-y-4">
               {/* KALH Video */}
               <div className="overflow-hidden rounded-[2rem] border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
                 <div className="border-b border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
@@ -126,10 +118,57 @@ export default function App() {
                   />
                 </div>
               </div>
+
+              {/* Press list — compact, between video and photo */}
+              <div className="rounded-[2rem] border border-white/15 bg-white/10 backdrop-blur-md px-5 py-3">
+                <div className="divide-y divide-white/10">
+                  <a href="https://www.abqjournal.com/opinion/opinion-talk-of-the-town/3038042" target="_blank" rel="noopener noreferrer"
+                    className="group flex items-baseline justify-between gap-3 py-2.5">
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 mr-2">Albuquerque Journal</span>
+                      <span className="text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/50">(Albuquerque focus)</span></span>
+                    </div>
+                    <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                  </a>
+                  <a href="https://www.lascrucesbulletin.com/stories/an-engineer-would-build-a-desalination-plant,168697" target="_blank" rel="noopener noreferrer"
+                    className="group flex items-baseline justify-between gap-3 py-2.5">
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 mr-2">Las Cruces Bulletin</span>
+                      <span className="text-sm font-bold text-white/90 group-hover:text-red-200 transition">An Engineer Would Build a Desalination Plant</span>
+                    </div>
+                    <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                  </a>
+                  <a href="https://www.rdrnews.com/opinion/editorials/new-mexico-deserves-a-republican-who-fights-back/article_da0da58a-1fd5-468c-8f73-b523003b401a.html" target="_blank" rel="noopener noreferrer"
+                    className="group flex items-baseline justify-between gap-3 py-2.5">
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 mr-2">Roswell Daily Record</span>
+                      <span className="text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/50">(Roswell focus)</span></span>
+                    </div>
+                    <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                  </a>
+                  <a href="https://www.thechronicle-news.com/raton-pass-isnt-dying-its-waiting-for-the-right-senator/" target="_blank" rel="noopener noreferrer"
+                    className="group flex items-baseline justify-between gap-3 py-2.5">
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 mr-2">Chronicle-News · Raton</span>
+                      <span className="text-sm font-bold text-white/90 group-hover:text-red-200 transition">Raton Pass Isn't Dying. It's Waiting for the Right Senator.</span>
+                    </div>
+                    <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                  </a>
+                  <a href="https://2ndlifemediaalamogordo.town.news/g/alamogordo-nm/post/376066/new-mexico-deserves-republican-who-fights-back-matt-channon" target="_blank" rel="noopener noreferrer"
+                    className="group flex items-baseline justify-between gap-3 py-2.5">
+                    <div className="min-w-0">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50 mr-2">Alamogordo Town News</span>
+                      <span className="text-sm font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/50">(Alamogordo focus)</span></span>
+                    </div>
+                    <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                  </a>
+                </div>
+              </div>
+
               {/* Hackathon photo */}
               <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 backdrop-blur-md">
                 <div className="border-b border-white/10 px-5 py-3">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-200">🥇 First Place · UNM Lobo Hackathon · Feb 2026</div>
+                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-200">🥇 First Place · UNM Lobo Hackathon · 2025</div>
                 </div>
                 <img
                   src="/breannamatt.png"
@@ -229,105 +268,6 @@ export default function App() {
           </div>
         </div>
       </section>
-
-      {/* ── PRESS & RECOGNITION ─────────────────────────────────────────── */}
-      <section id="press" className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-          <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-[0.24em] text-red-700">Press &amp; Recognition</div>
-            <h2 className="mt-4 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">In the News</h2>
-            <p className="mt-6 text-lg leading-8 text-slate-700">
-              Matt Channon, Republican candidate for U.S. Senate in New Mexico, has been published in newspapers across the state and recognized for his work as an engineer and inventor.
-            </p>
-          </div>
-
-          {/* Op-eds & Media — editorial list style */}
-          <div className="mt-12">
-            <div className="mb-2 text-xs font-bold uppercase tracking-[0.28em] text-slate-400">Published Writing</div>
-            <div className="divide-y divide-slate-100">
-
-              <a href="https://www.abqjournal.com/opinion/opinion-talk-of-the-town/3038042" target="_blank" rel="noopener noreferrer"
-                className="group flex items-baseline justify-between gap-6 py-5 transition hover:bg-slate-50 px-2 -mx-2 rounded-xl">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mr-3">Albuquerque Journal</span>
-                  <span className="text-base font-bold text-slate-900 group-hover:text-red-700 transition">New Mexico Deserves a Republican Who Fights Back</span>
-                </div>
-                <span className="shrink-0 text-xs text-slate-400">May 2026</span>
-              </a>
-
-              <a href="https://www.rdrnews.com/opinion/editorials/new-mexico-deserves-a-republican-who-fights-back/article_da0da58a-1fd5-468c-8f73-b523003b401a.html" target="_blank" rel="noopener noreferrer"
-                className="group flex items-baseline justify-between gap-6 py-5 transition hover:bg-slate-50 px-2 -mx-2 rounded-xl">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mr-3">Roswell Daily Record</span>
-                  <span className="text-base font-bold text-slate-900 group-hover:text-red-700 transition">New Mexico Deserves a Republican Who Fights Back</span>
-                </div>
-                <span className="shrink-0 text-xs text-slate-400">May 2026</span>
-              </a>
-
-              <a href="https://2ndlifemediaalamogordo.town.news/g/alamogordo-nm/post/376066/new-mexico-deserves-republican-who-fights-back-matt-channon" target="_blank" rel="noopener noreferrer"
-                className="group flex items-baseline justify-between gap-6 py-5 transition hover:bg-slate-50 px-2 -mx-2 rounded-xl">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mr-3">Alamogordo Town News</span>
-                  <span className="text-base font-bold text-slate-900 group-hover:text-red-700 transition">New Mexico Deserves a Republican Who Fights Back</span>
-                </div>
-                <span className="shrink-0 text-xs text-slate-400">May 2026</span>
-              </a>
-
-              <a href="https://www.lascrucesbulletin.com/stories/an-engineer-would-build-a-desalination-plant,168697" target="_blank" rel="noopener noreferrer"
-                className="group flex items-baseline justify-between gap-6 py-5 transition hover:bg-slate-50 px-2 -mx-2 rounded-xl">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mr-3">Las Cruces Bulletin</span>
-                  <span className="text-base font-bold text-slate-900 group-hover:text-red-700 transition">An Engineer Would Build a Desalination Plant</span>
-                </div>
-                <span className="shrink-0 text-xs text-slate-400">2026</span>
-              </a>
-
-              <a href="https://www.thechronicle-news.com/raton-pass-isnt-dying-its-waiting-for-the-right-senator/" target="_blank" rel="noopener noreferrer"
-                className="group flex items-baseline justify-between gap-6 py-5 transition hover:bg-slate-50 px-2 -mx-2 rounded-xl">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 mr-3">The Chronicle-News · Raton</span>
-                  <span className="text-base font-bold text-slate-900 group-hover:text-red-700 transition">Raton Pass Isn't Dying. It's Waiting for the Right Senator.</span>
-                </div>
-                <span className="shrink-0 text-xs text-slate-400">2026</span>
-              </a>
-
-            </div>
-          </div>
-
-          {/* Recognition */}
-          <div className="mt-14">
-            <div className="mb-6 text-xs font-bold uppercase tracking-[0.28em] text-slate-400">Recognition</div>
-            <div className="overflow-hidden rounded-[2rem] bg-[#0b1a31] text-white shadow-xl">
-              <div className="grid lg:grid-cols-[auto_1fr]">
-                <div className="flex items-center justify-center bg-black/20 p-6 lg:p-8">
-                  <img
-                    src="/breannamatt.png"
-                    alt="Matt Channon and Breanna Barna accepting the First Place $5,000 award at the 2025 UNM Lobo Hackathon for ShredLeash"
-                    className="w-full max-w-[220px] rounded-[1.25rem] object-cover shadow-2xl lg:max-w-[260px]"
-                  />
-                </div>
-                <div className="flex flex-col justify-center p-8 lg:p-10">
-                  <div className="flex flex-wrap items-center gap-3">
-                    <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-300">UNM Rainforest Innovations</div>
-                    <div className="text-xs text-white/50">Feb 17, 2026</div>
-                  </div>
-                  <div className="mt-3 inline-flex w-fit items-center rounded-full bg-red-700 px-4 py-1.5 text-xs font-black uppercase tracking-[0.2em] text-white shadow">
-                    🥇 First Place
-                  </div>
-                  <h3 className="mt-4 text-2xl font-black leading-snug tracking-tight md:text-3xl">
-                    2025 Lobo Hackathon — $5,000 Grand Prize
-                  </h3>
-                  <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300">
-                    Matt Channon and co-inventor Breanna Barna took first place out of the entire field at the University of New Mexico's annual Lobo Hackathon for <strong className="text-white">ShredLeash</strong>, a snowboard safety leash system. Sponsored by UNM's Anderson School of Management, School of Engineering, Health Sciences, and Rainforest Innovations.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      {/* ── END PRESS ───────────────────────────────────────────────────── */}
 
       <section id="movement" className="relative overflow-hidden bg-[#0a1730] text-white">
         <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(185,28,28,0.18),transparent_32%,transparent_68%,rgba(29,78,216,0.16))]" />
