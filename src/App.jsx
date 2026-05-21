@@ -128,7 +128,15 @@ export default function App() {
                       <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Albuquerque Journal</span>
                       <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
                     </div>
-                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Albuquerque)</span></div>
+                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">It's Time to Take Uncle Sam's Matches Away</div>
+                  </a>
+                  <a href="https://www.easternnewmexiconews.com/story/2026/05/20/voices/opinion-clovis-has-everything-except-the-jobs-community-deserves/233470.html" target="_blank" rel="noopener noreferrer"
+                    className="group block py-3 transition hover:opacity-80">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Eastern New Mexico News · Clovis</span>
+                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
+                    </div>
+                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">Clovis Has Everything Except the Jobs the Community Deserves</div>
                   </a>
                   <a href="https://www.lascrucesbulletin.com/stories/an-engineer-would-build-a-desalination-plant,168697" target="_blank" rel="noopener noreferrer"
                     className="group block py-3 transition hover:opacity-80">
