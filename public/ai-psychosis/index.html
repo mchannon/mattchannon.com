@@ -101,6 +101,8 @@
   background: #edf7ef;
   border: 2px solid #8fc69a;
   font-size: 1.05rem;
+  align-items: center;
+  gap: 16px;
 }
 
 .status strong {
@@ -111,6 +113,14 @@
 
 .status p {
   margin: 0;
+}
+
+.thankyou-photo {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex: 0 0 auto;
 }
 
     footer { border-top: 1px solid var(--line); padding: 28px 0 44px; color: var(--muted); font-size: .9rem; }
@@ -206,11 +216,18 @@
     </p>
     
 <div id="sent" class="status" role="status" aria-live="polite">
-  <strong>Press inquiry received.</strong>
-  <p>
-    Thanks for reaching out. Your message was submitted successfully.
-    I will respond as quickly as I can, especially if you included a deadline.
-  </p>
+  <img
+    src="https://mattchannon.com/matt-channon.jpg"
+    alt="Matthew Channon"
+    class="thankyou-photo">
+
+  <div>
+    <strong>Press inquiry received.</strong>
+    <p>
+      Thanks for reaching out. Your message was submitted successfully.
+      I will respond as quickly as I can, especially if you included a deadline.
+    </p>
+  </div>
 </div>
 
 
@@ -279,7 +296,7 @@
     const success = document.getElementById('sent');
     const form = document.getElementById('press-form');
 
-    success.style.display = 'block';
+    success.style.display = 'flex';
     form.style.display = 'none';
 
     success.scrollIntoView({
