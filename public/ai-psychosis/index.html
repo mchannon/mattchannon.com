@@ -65,6 +65,15 @@
     .timeline { margin: 0; padding-left: 1.3rem; }
     .timeline li { margin: .55rem 0; }
     .pill { display: inline-block; padding: .22rem .55rem; border-radius: 999px; background: #edf1f4; color: #3d4750; font-size: .78rem; font-weight: 700; letter-spacing: .03em; }
+    .story-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 16px; margin-top: 18px; }
+    .story-card { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .story-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .story-card p { margin: 0; }
+    .story-card.emphasis { background: #fff8eb; border-color: #e7c98b; }
+    .story-card .big { display: block; font-size: 1.55rem; line-height: 1.15; font-weight: 800; margin-bottom: 8px; }
+    .kicker { font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .evidence-quote { margin: 16px 0 0; padding: 18px 20px; border-left: 5px solid #4f7f58; background: #f3f8f4; border-radius: 8px; font-size: 1.05rem; }
+    .evidence-quote strong { font-size: 1.08rem; }
     form { display: grid; gap: 14px; margin-top: 18px; }
     .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     label { display: block; font-size: .91rem; font-weight: 700; margin-bottom: 5px; }
@@ -129,6 +138,7 @@
       header { padding-top: 42px; }
       section { padding: 20px; }
       .grid2 { grid-template-columns: 1fr; }
+      .story-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -138,47 +148,65 @@
     <div class="eyebrow">United States v. Matthew Channon · 1:26-cr-02056-MLG · District of New Mexico</div>
     <h1>Federal prosecutors invoke “AI-induced psychosis” in a criminal competency request</h1>
     <p class="deck">
-      This page collects primary-source court filings, free public links, and press contact information
-      concerning the government's September 28, 2026 competency filings in <em>United States v. Channon</em>.
+      Federal prosecutors are using a defendant’s reliance on ChatGPT and Claude as evidence of
+      <strong>“AI-induced psychosis”</strong> and seeking a competency process that can result in psychiatric custody for
+      <strong>up to 30 days</strong>, despite current court-ordered counseling records documenting intact functioning and no contrary clinical indications of risk.
     </p>
   </div>
 </header>
 
 <main class="wrap">
   <section aria-labelledby="what">
-    <span class="pill">Primary-source quote</span>
-    <h2 id="what">What the government filed</h2>
+    <span class="pill">Press briefing</span>
+    <h2 id="what">The story in 30 seconds</h2>
+
     <p>
       In Document 56, the United States says its earlier request is now “entirely a motion for a competency
-      evaluation pursuant to 18 U.S.C. § 4241.” The filing argues that Channon's use of generative AI tools
+      evaluation pursuant to 18 U.S.C. § 4241.” The filing argues that Channon’s use of generative AI tools
       in developing litigation strategy is evidence relevant to competency.
     </p>
+
     <div class="quote">“AI-induced psychosis”</div>
-    <p class="source-note">
-      The phrase appears in the government's own filing. Use the page-specific links below to read the source document directly.
-    </p>
+
+    <div class="story-grid">
+      <div class="story-card emphasis">
+        <div class="kicker">What prosecutors are asking for</div>
+        <span class="big">Psychiatric custody for <strong>up to 30 days</strong></span>
+        <p>
+          A competency examination under the federal statute can result in the defendant being taken into federal custody
+          and sent to a psychiatric facility for up to 30 days, with a possible 15-day extension.
+        </p>
+      </div>
+
+      <div class="story-card">
+        <div class="kicker">What the current counseling record says</div>
+        <p>
+          The May 8 intake note records Channon as oriented to person, place and time, with appropriate thought content,
+          unremarkable thought process and perception, good attention and concentration, and intact functional status.
+        </p>
+      </div>
+    </div>
+
+    <div class="evidence-quote">
+      <strong>Current risk assessment:</strong>
+      “Patient denies all areas of risk. No contrary clinical indications present.”
+      <a href="./cwa.pdf" target="_blank" rel="noopener noreferrer">Read the assessment.</a>
+    </div>
 
     <div class="docs">
-      <a class="doc" target="_blank" rel="noopener noreferrer"
-         href="https://storage.courtlistener.com/recap/gov.uscourts.nmd.555788/gov.uscourts.nmd.555788.56.0.pdf#page=2">
+      <a class="doc" target="_blank" rel="noopener noreferrer" href="https://storage.courtlistener.com/recap/gov.uscourts.nmd.555788/gov.uscourts.nmd.555788.56.0.pdf#page=2">
         <strong>Document 56 — Government competency filing</strong>
         <span>“AI-induced psychosis” passage · PDF page 2 · free CourtListener copy</span>
       </a>
-
-      <a class="doc" target="_blank" rel="noopener noreferrer"
-         href="https://storage.courtlistener.com/recap/gov.uscourts.nmd.555788/gov.uscourts.nmd.555788.57.0.pdf#page=3">
+      <a class="doc" target="_blank" rel="noopener noreferrer" href="https://storage.courtlistener.com/recap/gov.uscourts.nmd.555788/gov.uscourts.nmd.555788.57.0.pdf#page=3">
         <strong>Document 57 — Government response concerning counsel</strong>
         <span>Government repeats the “AI-induced psychosis” allegation · PDF page 3 · free CourtListener copy</span>
       </a>
-
-      <a class="doc" target="_blank" rel="noopener noreferrer"
-         href="https://storage.courtlistener.com/recap/gov.uscourts.nmd.555788/gov.uscourts.nmd.555788.58.0.pdf#page=1">
-        <strong>Document 58 — Conditional request for self-representation</strong>
-        <span>Defense filing seeking self-representation in the alternative to substitute counsel, with exhibits · free CourtListener copy</span>
+      <a class="doc" target="_blank" rel="noopener noreferrer" href="./cwa.pdf">
+        <strong>Counseling World assessment</strong>
+        <span>Current court-mandated counseling assessment · PDF</span>
       </a>
-
-      <a class="doc" target="_blank" rel="noopener noreferrer"
-         href="https://www.courtlistener.com/docket/73285423/united-states-v-channon/#entry-56">
+      <a class="doc" target="_blank" rel="noopener noreferrer" href="https://www.courtlistener.com/docket/73285423/united-states-v-channon/#entry-56">
         <strong>Full public docket — CourtListener</strong>
         <span>Free docket access and available RECAP documents</span>
       </a>
@@ -201,46 +229,42 @@
     <h2 id="why">Why this is newsworthy</h2>
 
     <p>
-      Federal prosecutors have cited a defendant’s use of ChatGPT and Claude as evidence of
-      <strong>“AI-induced psychosis”</strong> and asked a judge to question whether he is mentally fit to stand trial.
+      This is not only an unusual phrase appearing in a federal filing. Prosecutors are using a defendant’s reliance on
+      ChatGPT and Claude as part of an argument that he may be mentally unable to participate properly in his own defense.
     </p>
 
     <p>
-      Channon is already under a court-ordered counseling regime, currently twice a month. In the provider’s May 8 intake note —
-      <strong><a href="./cwa.pdf" target="_blank" rel="noopener noreferrer">available below</a></strong> —
-      he was recorded as oriented to person, place and time, with appropriate thought content, unremarkable thought process and perception,
-      good attention and concentration, and intact functional status. The risk assessment states:
-      <strong>“Patient denies all areas of risk. No contrary clinical indications present.”</strong>
+      At the same time, Channon is already under a court-ordered counseling regime, currently twice a month. The provider’s
+      May 8 intake note — <strong><a href="./cwa.pdf" target="_blank" rel="noopener noreferrer">available below</a></strong> —
+      records intact functioning and states: <strong>“Patient denies all areas of risk. No contrary clinical indications present.”</strong>
     </p>
 
     <p>
-      Yet prosecutors are seeking a competency examination that can result in Channon being taken into federal custody and sent to a
-      psychiatric facility for <strong>up to 30 days</strong> — potentially 45 with an extension. The case therefore combines three
-      developing issues in one federal prosecution: the use of generative-AI activity as evidence of mental incompetence, the possibility
-      of psychiatric confinement despite reassuring current treatment records, and the public use of highly sensitive mental-health
-      material in a criminal docket.
+      Prosecutors are nevertheless seeking a competency examination that can result in psychiatric custody for
+      <strong>up to 30 days</strong> — potentially 45 with an extension. That creates a direct public-interest question about
+      escalation, cost, and judicial oversight when the court’s existing treatment process is producing reassuring current findings.
     </p>
 
-    <div class="docs">
-      <a class="doc" target="_blank" rel="noopener noreferrer" href="./cwa.pdf">
-        <strong>Counseling World assessment</strong>
-        <span>Current court-mandated counseling assessment · PDF</span>
-      </a>
-    </div>
+    <p>
+      The case therefore combines three developing issues in one federal prosecution: the use of generative-AI activity as evidence
+      of mental incompetence, the possibility of psychiatric confinement despite contrary current treatment evidence, and the public
+      use of highly sensitive mental-health material in a criminal docket.
+    </p>
   </section>
 
   <section aria-labelledby="ai-angle">
     <h2 id="ai-angle">Why the AI angle is unusual</h2>
 
     <p>
-      The phrase <strong>“AI-induced psychosis”</strong> has largely appeared in public discussion as a description of alleged harms
-      associated with chatbot use. Here, however, a federal prosecutor is using the phrase in a different setting: as part of an argument
-      that a criminal defendant’s reliance on generative AI may show that he is unable to assist properly in his own defense.
+      Public discussion of “AI-induced psychosis” has largely focused on alleged harms caused by chatbot use. Here, a federal
+      prosecutor is using the phrase in a different way: as part of an argument that a criminal defendant’s use of generative AI
+      may show that he is unable to assist properly in his own defense.
     </p>
 
     <p>
-      This page does not claim that the filing is the first use of the phrase in any American court. It does document an unusual and
-      potentially important application of the concept inside a federal criminal competency proceeding.
+      This page does not claim that the filing is the first use of the phrase in any American court. It does document an unusual
+      application of the concept inside a federal criminal competency proceeding, with an immediate liberty consequence if the court
+      orders custodial evaluation.
     </p>
   </section>
 
@@ -259,8 +283,8 @@
     </p>
 
     <p>
-      That sequence raises a separate public-record question from the merits of competency itself: how highly sensitive mental-health
-      information is gathered, placed on a public federal docket, and later reused in proceedings that can affect a defendant’s liberty.
+      This creates a second story separate from the merits of competency itself: how highly sensitive mental-health information was
+      gathered, placed on a public federal docket, and later reused in proceedings capable of affecting a defendant’s liberty.
     </p>
   </section>
 
