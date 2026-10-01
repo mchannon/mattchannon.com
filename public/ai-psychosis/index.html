@@ -92,7 +92,27 @@
       cursor: pointer;
     }
     button:hover { background: var(--accent-dark); }
-    .status { padding: 12px 14px; border-radius: 8px; background: #edf7ef; border: 1px solid #b9dfc0; display: none; }
+    
+.status {
+  display: none;
+  margin: 22px 0;
+  padding: 24px;
+  border-radius: 12px;
+  background: #edf7ef;
+  border: 2px solid #8fc69a;
+  font-size: 1.05rem;
+}
+
+.status strong {
+  display: block;
+  font-size: 1.35rem;
+  margin-bottom: 6px;
+}
+
+.status p {
+  margin: 0;
+}
+
     footer { border-top: 1px solid var(--line); padding: 28px 0 44px; color: var(--muted); font-size: .9rem; }
     code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .9em; }
     @media (max-width: 680px) {
@@ -170,10 +190,11 @@
   <section aria-labelledby="why">
     <h2 id="why">Why this is newsworthy</h2>
     <p>
-      The filings place an emerging AI-and-mental-health phrase directly inside a federal criminal competency dispute.
-      The underlying legal question is competency to stand trial: whether a defendant presently understands the proceedings
-      and can properly assist in the defense. The source documents above allow reporters and researchers to examine the government's
-      argument without relying on screenshots, summaries, or paid PACER access.
+      Federal prosecutors have cited a defendant’s use of ChatGPT and Claude as evidence of
+      <strong>“AI-induced psychosis”</strong> and asked a judge to question whether he is mentally fit to stand trial.
+      If the court orders the type of competency examination the government seeks, the defendant can be taken into
+      federal custody and sent to a psychiatric facility for <strong>up to 30 days</strong> — potentially 45 with an
+      extension — while psychologists evaluate whether he understands the proceedings and can work with his lawyer.
     </p>
   </section>
 
@@ -183,9 +204,17 @@
       Reporters, researchers, and editors may use this form. A copy of each submission is logged by this site before an email notification is generated,
       so the form does not depend solely on email delivery.
     </p>
-    <div id="sent" class="status" role="status">Thank you. Your message was received.</div>
+    
+<div id="sent" class="status" role="status" aria-live="polite">
+  <strong>Press inquiry received.</strong>
+  <p>
+    Thanks for reaching out. Your message was submitted successfully.
+    I will respond as quickly as I can, especially if you included a deadline.
+  </p>
+</div>
 
-    <form method="post" action="https://1.pillcall.com/press-contact.pl" accept-charset="UTF-8">
+
+    <form id="press-form" method="post" action="https://1.pillcall.com/press-contact.pl" accept-charset="UTF-8">
       <div class="grid2">
         <div>
           <label for="name">Name *</label>
@@ -244,9 +273,19 @@
 
 <script>
   document.getElementById('form_started').value = String(Date.now());
-  const params = new URLSearchParams(location.search);
+  const params = new URLSearchParams(window.location.search);
+
   if (params.get('sent') === '1') {
-    document.getElementById('sent').style.display = 'block';
+    const success = document.getElementById('sent');
+    const form = document.getElementById('press-form');
+
+    success.style.display = 'block';
+    form.style.display = 'none';
+
+    success.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
   }
 </script>
 </body>
