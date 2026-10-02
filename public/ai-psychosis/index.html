@@ -140,6 +140,79 @@
       .grid2 { grid-template-columns: 1fr; }
       .story-grid { grid-template-columns: 1fr; }
     }
+  
+    .headline-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 24px 0 30px;
+    }
+
+    .headline-fact {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+      background: #fff;
+      min-height: 150px;
+    }
+
+    .headline-fact .label {
+      display: block;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .headline-fact .fact {
+      display: block;
+      font-size: 1.3rem;
+      line-height: 1.25;
+      font-weight: 800;
+    }
+
+    .headline-fact .sub {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: .94rem;
+      line-height: 1.4;
+    }
+
+    .headline-fact.primary {
+      border-width: 2px;
+    }
+
+    .headline-fact a {
+      font-weight: 800;
+    }
+
+    .bgcheck-callout {
+      display: block;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border: 2px solid var(--line);
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      background: #fff;
+    }
+
+    .bgcheck-callout:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .headline-facts {
+        grid-template-columns: 1fr;
+      }
+      .headline-fact {
+        min-height: 0;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -159,6 +232,29 @@
   <section aria-labelledby="what">
     <span class="pill">Press briefing</span>
     <h2 id="what">The story in 30 seconds</h2>
+
+    <div class="headline-facts">
+      <div class="headline-fact primary">
+        <span class="label">Government claim</span>
+        <span class="fact">“AI-induced psychosis”</span>
+        <span class="sub">Prosecutors cite Channon’s use of ChatGPT and Claude as evidence supporting a competency evaluation.</span>
+      </div>
+
+      <div class="headline-fact">
+        <span class="label">Government’s own provider</span>
+        <span class="fact">No indication he was a danger to himself or anyone else</span>
+        <span class="sub">The provider also recorded intact functioning and no contrary clinical indications of risk.</span>
+      </div>
+
+      <div class="headline-fact">
+        <span class="label">Government’s own discovery</span>
+        <span class="fact">No felony appears in the criminal-history section</span>
+        <span class="sub">
+          <a href="./bgcheck.pdf" target="_blank" rel="noopener noreferrer">View the redacted four-page zero-felony-history excerpt.</a>
+        </span>
+      </div>
+    </div>
+
 
     <p>
       In Document 56, the United States says its earlier request is now “entirely a motion for a competency
@@ -322,7 +418,7 @@
       The uncertainty was not abstract. A law-enforcement background report later produced in discovery
       identified three possible criminal records, but did not list the federal felony conviction the
       government now says I knowingly lied about.
-      <strong><a href="./bgcheck.pdf" target="_blank" rel="noopener noreferrer">View the government’s own redacted four-page zero-felony-history excerpt.</a></strong>
+      <a class="bgcheck-callout" href="./bgcheck.pdf" target="_blank" rel="noopener noreferrer">View the government’s own redacted four-page zero-felony-history excerpt.</a>
     </p>
 
     <p>
