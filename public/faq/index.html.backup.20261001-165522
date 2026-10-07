@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Primary-source filings and press contact for United States v. Matthew Channon, No. 1:26-cr-02056-MLG (D.N.M.), including the government's use of the phrase “AI-induced psychosis” in a competency filing.">
+  <meta property="og:title" content="Federal prosecutors invoke “AI-induced psychosis” in U.S. criminal competency request">
+  <meta property="og:description" content="Read the primary-source filings free on CourtListener in United States v. Channon, No. 1:26-cr-02056-MLG.">
+  <meta property="og:type" content="website">
+  <title>AI-Induced Psychosis Filing | United States v. Channon</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --text: #14171a;
+      --muted: #5a6570;
+      --line: #dfe4e8;
+      --accent: #1457a8;
+      --accent-dark: #0d3f7f;
+      --quote: #eef4fb;
+      --max: 940px;
+      color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 17px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration-thickness: .08em; text-underline-offset: .15em; }
+    a:hover { color: var(--accent-dark); }
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    header { padding: 64px 0 36px; background: var(--panel); border-bottom: 1px solid var(--line); }
+    .eyebrow { font-size: .85rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    h1 { max-width: 850px; margin: .45rem 0 1rem; font-size: clamp(2rem, 5vw, 4rem); line-height: 1.06; letter-spacing: -.035em; }
+    .deck { max-width: 800px; margin: 0; font-size: 1.2rem; color: #303941; }
+    main { padding: 34px 0 70px; }
+    section { margin: 28px 0; padding: 26px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+    h2 { margin: 0 0 14px; font-size: 1.45rem; line-height: 1.2; }
+    h3 { margin-bottom: .25rem; font-size: 1.05rem; }
+    .quote {
+      margin: 20px 0;
+      padding: 20px 22px;
+      background: var(--quote);
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      font-size: 1.18rem;
+      font-weight: 650;
+    }
+    .source-note, .fine { color: var(--muted); font-size: .92rem; }
+    .docs { display: grid; gap: 12px; margin-top: 18px; }
+    .doc {
+      display: block;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      text-decoration: none;
+      background: #fff;
+    }
+    .doc:hover { border-color: #aab8c5; box-shadow: 0 4px 18px rgba(0,0,0,.05); }
+    .doc strong { display: block; color: var(--text); font-size: 1.02rem; }
+    .doc span { color: var(--muted); font-size: .94rem; }
+    .timeline { margin: 0; padding-left: 1.3rem; }
+    .timeline li { margin: .55rem 0; }
+    .pill { display: inline-block; padding: .22rem .55rem; border-radius: 999px; background: #edf1f4; color: #3d4750; font-size: .78rem; font-weight: 700; letter-spacing: .03em; }
+    .story-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 16px; margin-top: 18px; }
+    .story-card { padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .story-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+    .story-card p { margin: 0; }
+    .story-card.emphasis { background: #fff8eb; border-color: #e7c98b; }
+    .story-card .big { display: block; font-size: 1.55rem; line-height: 1.15; font-weight: 800; margin-bottom: 8px; }
+    .kicker { font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+    .evidence-quote { margin: 16px 0 0; padding: 18px 20px; border-left: 5px solid #4f7f58; background: #f3f8f4; border-radius: 8px; font-size: 1.05rem; }
+    .evidence-quote strong { font-size: 1.08rem; }
+    form { display: grid; gap: 14px; margin-top: 18px; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    label { display: block; font-size: .91rem; font-weight: 700; margin-bottom: 5px; }
+    input, textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #bcc6ce;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--text);
+      font: inherit;
+    }
+    input:focus, textarea:focus { outline: 3px solid rgba(20,87,168,.16); border-color: var(--accent); }
+    textarea { min-height: 150px; resize: vertical; }
+    .hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; overflow: hidden; }
+    button {
+      justify-self: start;
+      border: 0;
+      border-radius: 8px;
+      padding: 12px 18px;
+      background: var(--accent);
+      color: #fff;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+    }
+    button:hover { background: var(--accent-dark); }
+    
+.status {
+  display: none;
+  margin: 22px 0;
+  padding: 24px;
+  border-radius: 12px;
+  background: #edf7ef;
+  border: 2px solid #8fc69a;
+  font-size: 1.05rem;
+  align-items: center;
+  gap: 16px;
+}
+
+.status strong {
+  display: block;
+  font-size: 1.35rem;
+  margin-bottom: 6px;
+}
+
+.status p {
+  margin: 0;
+}
+
+.thankyou-photo {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+    footer { border-top: 1px solid var(--line); padding: 28px 0 44px; color: var(--muted); font-size: .9rem; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .9em; }
+    @media (max-width: 680px) {
+      header { padding-top: 42px; }
+      section { padding: 20px; }
+      .grid2 { grid-template-columns: 1fr; }
+      .story-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">United States v. Matthew Channon · 1:26-cr-02056-MLG · District of New Mexico</div>
+    <h1>Federal prosecutors invoke “AI-induced psychosis” in a criminal competency request</h1>
+    <p class="deck">
+      Federal prosecutors are using a defendant’s reliance on ChatGPT and Claude as evidence of
+      <strong>“AI-induced psychosis”</strong> and seeking a competency process that can result in psychiatric custody for
+      <strong>up to 30 days</strong>, despite current court-ordered counseling records documenting intact functioning and no contrary clinical indications of risk.
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="what">
+    <span class="pill">Press briefing</span>
+    <h2 id="what">The story in 30 seconds</h2>
+
+    <p>
+      In Document 56, the United States says its earlier request is now “entirely a motion for a competency
+      evaluation pursuant to 18 U.S.C. § 4241.” The filing argues that Channon’s use of generative AI tools
+      in developing litigation strategy is evidence relevant to competency.
+    </p>
+
+    <div class="quote">“AI-induced psychosis”</div>
+
+    <div class="story-grid">
+      <div class="story-card emphasis">
+        <div class="kicker">What prosecutors are asking for</div>
+        <span class="big">Psychiatric custody for <strong>up to 30 days</strong></span>
+        <p>
+          A competency examination under the federal statute can result in the defendant being taken into federal custody
+          and sent to a psychiatric facility for up to 30 days, with a possible 15-day extension.
+        </p>
+      </div>
+
+      <div class="story-card">
+        <div class="kicker">What the current counseling record says</div>
+        <p>
+          The May 8 intake note records Channon as oriented to person, place and time, with appropriate thought content,
+          unremarkable thought process and perception, good attention and concentration, and intact functional status.
+        </p>
+      </div>
+    </div>
+
+    <div class="evidence-quote">
+      <strong>Current risk assessment:</strong>
+      “Patient denies all areas of risk. No contrary clinical indications present.”
+      <a href="./cwa.pdf" target="_blank" rel="noopener noreferrer">Read the assessment.</a>
+    </div>
+
+    <div class="docs">
+      <a class="doc" target="_blank" rel="noopener noreferrer" href="https://storage.courtlistener.com/recap/gov.uscourts.nmd.555788/gov.uscourts.nmd.555788.56.0.pdf#page=2">
+        <strong>Document 56 — Government competency filing</strong>
+        <span>“AI-induced psychosis” passage · PDF page 2 · free CourtListener copy</span>
+      </a>
+      <a class="doc" target="_blank" rel="noopener noreferrer" href="https://storage.courtlistener.com/recap/gov.uscourts.nmd.555788/gov.uscourts.nmd.555788.57.0.pdf#page=3">
+        <strong>Document 57 — Government response concerning counsel</strong>
+        <span>Government repeats the “AI-induced psychosis” allegation · PDF page 3 · free CourtListener copy</span>
+      </a>
+      <a class="doc" target="_blank" rel="noopener noreferrer" href="./cwa.pdf">
+        <strong>Counseling World assessment</strong>
+        <span>Current court-mandated counseling assessment · PDF</span>
+      </a>
+      <a class="doc" target="_blank" rel="noopener noreferrer" href="https://www.courtlistener.com/docket/73285423/united-states-v-channon/#entry-56">
+        <strong>Full public docket — CourtListener</strong>
+        <span>Free docket access and available RECAP documents</span>
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="who">
+    <h2 id="who">Who I am</h2>
+
+    <p>
+      I’m a materials engineer and technology entrepreneur. I also ran for the U.S. Senate from New Mexico in 2026.
+    </p>
+
+    <p>
+      I started using ChatGPT, Claude, and other AI tools to help me research my federal cases.
+      I’ve used them to compare court filings, examine document metadata and imagery, and work through procedural questions.
+    </p>
+
+    <p>
+      That work led me to what I believe are serious authenticity problems in some of the records connected with my cases.
+    </p>
+
+    <p>
+      Now the government is pointing to that same use of AI as evidence that I may not be mentally competent
+      to participate in my own defense.
+    </p>
+
+    <p>
+      My broader background is available at
+      <a href="https://mattchannon.com/" target="_blank" rel="noopener noreferrer"><strong>mattchannon.com</strong></a>.
+    </p>
+  </section>
+
+  <section aria-labelledby="context">
+    <h2 id="context">Procedural context</h2>
+    <ol class="timeline">
+      <li><strong>September 28, 2026:</strong> The United States files Document 56, expressly converting its request into a § 4241 competency-evaluation motion and invoking “AI-induced psychosis.”</li>
+      <li><strong>September 28, 2026:</strong> The United States files Document 57 opposing appointed counsel's third motion to withdraw and again invokes the phrase.</li>
+      <li><strong>September 28, 2026:</strong> Document 58 appears on the docket, seeking self-representation under <em>Faretta</em> in the alternative to appointment of substitute counsel.</li>
+    </ol>
+    <p class="fine">
+      This page is an index to public source material. Statements about what a filing says are intended to be checked against the linked filing itself.
+    </p>
+  </section>
+
+  <section aria-labelledby="why">
+    <h2 id="why">Why this is newsworthy</h2>
+
+    <p>
+      This is not only an unusual phrase appearing in a federal filing. Prosecutors are using a defendant’s reliance on
+      ChatGPT and Claude as part of an argument that he may be mentally unable to participate properly in his own defense.
+    </p>
+
+    <p>
+      At the same time, Channon is already under a court-ordered counseling regime, currently twice a month. The provider’s
+      May 8 intake note — <strong><a href="./cwa.pdf" target="_blank" rel="noopener noreferrer">available here</a></strong> —
+      records intact functioning and states: <strong>“Patient denies all areas of risk. No contrary clinical indications present.”</strong>
+    </p>
+
+    <p>
+      Prosecutors are nevertheless seeking a competency examination that can result in psychiatric custody for
+      <strong>up to 30 days</strong> — potentially 45 with an extension. That creates a direct public-interest question about
+      escalation, cost, and judicial oversight when the court’s existing treatment process is producing reassuring current findings.
+    </p>
+
+    <p>
+      The case therefore combines three developing issues in one federal prosecution: the use of generative-AI activity as evidence
+      of mental incompetence, the possibility of psychiatric confinement despite contrary current treatment evidence, and the public
+      use of highly sensitive mental-health material in a criminal docket.
+    </p>
+  </section>
+
+  <section aria-labelledby="ai-angle">
+    <h2 id="ai-angle">Why the AI angle is unusual</h2>
+
+    <p>
+      Public discussion of <strong>“AI-induced psychosis”</strong> has largely focused on alleged harms
+      associated with chatbot use. Here, however, a federal prosecutor is using the phrase in a different
+      setting: as part of an argument that a criminal defendant’s use of generative AI may show that he is
+      unable to assist properly in his own defense.
+    </p>
+
+    <p>
+      The consequence is not merely rhetorical. A competency order can result in custodial psychiatric
+      evaluation, making the defendant’s use of AI part of a proceeding capable of directly affecting his liberty.
+    </p>
+  </section>
+
+  <section aria-labelledby="mental-health-record">
+    <h2 id="mental-health-record">How the mental-health record was built</h2>
+
+    <p>
+      The government’s competency argument did not begin with the September AI filing. Earlier in the case, prosecutors relied on
+      U.S. Marshals Service reports describing prior psychiatric hospitalization, alleged diagnoses, medications, statements attributed
+      to Channon, and statements from family members.
+    </p>
+
+    <p>
+      Those reports were filed on the public docket as exhibits to the government’s earlier motion seeking access to a court-ordered
+      mental-health assessment. The later AI filing then incorporated that earlier material into the renewed competency argument.
+    </p>
+
+    <p>
+      This creates a second story separate from the merits of competency itself: how highly sensitive mental-health information was
+      gathered, placed on a public federal docket, and later reused in proceedings capable of affecting a defendant’s liberty.
+    </p>
+  </section>
+
+  <section aria-labelledby="press-contact" id="press-contact">
+    <h2>Press inquiries</h2>
+    <p>
+      Reporters, researchers, and editors may use this form. A copy of each submission is logged by this site before an email notification is generated,
+      so the form does not depend solely on email delivery.
+    </p>
+    
+<div id="sent" class="status" role="status" aria-live="polite">
+  <img
+    src="https://mattchannon.com/matt-channon.jpg"
+    alt="Matthew Channon"
+    class="thankyou-photo">
+
+  <div>
+    <strong>Press inquiry received.</strong>
+    <p>
+      Thanks for reaching out. Your message was submitted successfully.
+      I will respond as quickly as I can, especially if you included a deadline.
+    </p>
+  </div>
+</div>
+
+
+    <form id="press-form" method="post" action="https://1.pillcall.com/press-contact.pl" accept-charset="UTF-8">
+      <div class="grid2">
+        <div>
+          <label for="name">Name *</label>
+          <input id="name" name="name" autocomplete="name" required maxlength="120">
+        </div>
+        <div>
+          <label for="outlet">Outlet / organization</label>
+          <input id="outlet" name="outlet" autocomplete="organization" maxlength="160">
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" autocomplete="email" required maxlength="254">
+        </div>
+        <div>
+          <label for="callback">Phone, Signal, or WhatsApp (optional)</label>
+          <input id="callback" name="callback" maxlength="160">
+        </div>
+      </div>
+
+      <div>
+        <label for="deadline">Deadline / timing (optional)</label>
+        <input id="deadline" name="deadline" maxlength="160" placeholder="e.g. Today at 4 p.m. MT">
+      </div>
+
+      <div>
+        <label for="subject">Subject *</label>
+        <input id="subject" name="subject" required maxlength="180" value="United States v. Channon / AI-induced psychosis">
+      </div>
+
+      <div>
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required maxlength="10000"></textarea>
+      </div>
+
+      <div class="hp" aria-hidden="true">
+        <label for="website">Leave this field blank</label>
+        <input id="website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <input type="hidden" name="form_started" id="form_started" value="">
+      <button type="submit">Send press inquiry</button>
+      <p class="fine">Please do not include confidential medical, financial, or attorney-client material in this form.</p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Case:</strong> <em>United States v. Matthew Channon</em>, No. 1:26-cr-02056-MLG (D.N.M.).</p>
+    <p>Primary documents linked above are hosted by CourtListener / RECAP. This page is maintained by Matthew Channon.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('form_started').value = String(Date.now());
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get('sent') === '1') {
+    const success = document.getElementById('sent');
+    const form = document.getElementById('press-form');
+
+    success.style.display = 'flex';
+    form.style.display = 'none';
+
+    success.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  }
+</script>
+</body>
+</html>
