@@ -1,336 +1,89 @@
+import React, { useState } from 'react';
+import './index.css';
+
+/* Update these settings when the public links and original opening media are available.
+   The source upload did not include an original cinematic opening asset. */
+const SITE = {
+  documentaryUrl: '', // e.g. https://www.youtube.com/watch?v=YOUR_VIDEO_ID
+  fundraiserUrl: '', // your actual GoFundMe address
+  pacergateUrl: '', // direct link to PACERgate Vol. 1
+  senateOpeningVideo: '', // file in /public or a URL; optional, preserving the archival video below
+  senateInterviewId: 'ErTTNl4he14', // verified in the uploaded source
+};
+
+const press = [
+  ['Albuquerque Journal', 'It’s Time to Take Uncle Sam’s Matches Away', 'https://www.abqjournal.com/opinion/opinion-talk-of-the-town/3038042'],
+  ['Eastern New Mexico News', 'Clovis Has Everything Except the Jobs the Community Deserves', 'https://www.easternnewmexiconews.com/story/2026/05/20/voices/opinion-clovis-has-everything-except-the-jobs-community-deserves/233470.html'],
+  ['Las Cruces Bulletin', 'An Engineer Would Build a Desalination Plant', 'https://www.lascrucesbulletin.com/stories/an-engineer-would-build-a-desalination-plant,168697'],
+  ['Roswell Daily Record', 'New Mexico Deserves a Republican Who Fights Back', 'https://www.rdrnews.com/opinion/editorials/new-mexico-deserves-a-republican-who-fights-back/article_da0da58a-1fd5-468c-8f73-b523003b401a.html'],
+  ['Chronicle-News · Raton', 'Raton Pass Isn’t Dying. It’s Waiting for the Right Senator.', 'https://www.thechronicle-news.com/raton-pass-isnt-dying-its-waiting-for-the-right-senator/'],
+  ['Alamogordo Town News', 'New Mexico Deserves a Republican Who Fights Back', 'https://2ndlifemediaalamogordo.town.news/g/alamogordo-nm/post/376066/new-mexico-deserves-republican-who-fights-back-matt-channon'],
+];
+
+function Arrow({children, href, secondary=false, external=false}) {
+  return <a href={href} className={'action '+(secondary?'action-secondary':'action-primary')} target={external?'_blank':undefined} rel={external?'noopener noreferrer':undefined}>{children}<span aria-hidden="true">↗</span></a>;
+}
+
+function SectionHead({eyebrow, title, children, light=false}) {
+  return <div className={'section-head '+(light?'section-head-light':'')}><div className="eyebrow">{eyebrow}</div><h2>{title}</h2>{children && <p>{children}</p>}</div>;
+}
+
 export default function App() {
-  return (
-    <div id="top" className="min-h-screen bg-white text-slate-900">
-      <section className="relative overflow-hidden bg-[#081325] text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_38%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,19,37,0.20)_0%,rgba(7,19,37,0.42)_34%,rgba(7,19,37,0.68)_62%,rgba(7,19,37,0.90)_100%)]" />
-
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img
-            src="/flag-bg.jpg"
-            alt=""
-            className="absolute -left-20 -top-2 h-[32rem] w-[68rem] rotate-[-5deg] object-cover opacity-40"
-          />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,19,37,0.06)_0%,rgba(7,19,37,0.18)_28%,rgba(7,19,37,0.42)_58%,rgba(7,19,37,0.78)_100%)]" />
-        </div>
-
-        <header className="relative z-10 border-b border-white/10">
-          <div className="mx-auto grid max-w-7xl grid-cols-[minmax(16rem,0.95fr)_minmax(0,1.55fr)] items-center gap-8 px-6 py-5 md:px-10">
-            <div className="pr-4 lg:pr-6">
-              <div className="text-[2rem] font-black uppercase leading-none tracking-[0.16em]">Matt Channon</div>
-              <div className="mt-2 text-[12px] font-semibold uppercase tracking-[0.34em] text-white/75">
-                Walk-On for U.S. Senate
-              </div>
-            </div>
-            <nav className="hidden grid-cols-3 items-start justify-self-end gap-6 md:grid lg:gap-8">
-              <a href="#about" className="group min-w-[10rem] text-left">
-                <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
-                  Meet Matt
-                </div>
-                <div className="mt-2 text-[9px] font-semibold uppercase leading-tight tracking-[0.16em] text-white/70 transition group-hover:text-white/90">
-                  Engineer • Inventor • <span className="whitespace-nowrap">Uber Driver</span> • <span className="whitespace-nowrap">Dad</span>
-                </div>
-              </a>
-              <a href="#issues" className="group min-w-[9rem] text-left">
-                <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
-                  Priorities
-                </div>
-                <div className="mt-2 text-[10px] font-semibold uppercase leading-none tracking-[0.2em] text-white/70 transition group-hover:text-white/90">
-                  Fix What Is Broken
-                </div>
-              </a>
-              <a href="#movement" className="group min-w-[9rem] text-left">
-                <div className="text-base font-black uppercase leading-none tracking-[0.14em] text-white transition group-hover:text-red-200">
-                  Get Involved
-                </div>
-                <div className="mt-2 text-[10px] font-semibold uppercase leading-none tracking-[0.2em] text-white/70 transition group-hover:text-white/90">
-                  A New Mexico Original
-                </div>
-              </a>
-            </nav>
-          </div>
-        </header>
-
-        <div className="relative z-10 mx-auto max-w-7xl px-6 pb-24 pt-14 md:px-10 md:pb-32 md:pt-16">
-          <div className="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-            <div>
-              <div className="inline-flex items-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-white/90 shadow-lg backdrop-blur">
-                New Mexico • Strength • Accountability
-              </div>
-              <h1 className="mt-6 max-w-5xl text-5xl font-black leading-[0.95] tracking-tight md:text-7xl lg:text-[5.1rem]">
-                $4 gas. $6 diesel. $200 grocery bills. Housing costs are insane.
-                <span className="mt-4 block text-red-200">Are you better off than you were in 2020?</span>
-              </h1>
-              <p className="mt-8 max-w-3xl text-lg leading-8 text-slate-100 md:text-xl">
-                New Mexicans are in pain. They do not need another polished slogan or another empty suit in Washington. They need an engineer who understands how systems break down, how to fix what is broken, and how to make government work for ordinary people again.
-              </p>
-
-              <div className="mt-10 flex flex-wrap gap-4">
-                <a
-                  href="#movement"
-                  className="rounded-2xl bg-red-700 px-7 py-4 text-base font-extrabold uppercase tracking-[0.14em] text-white shadow-2xl transition hover:-translate-y-0.5 hover:bg-red-600"
-                >
-                  Join the Campaign
-                </a>
-                <a
-                  href="#issues"
-                  className="rounded-2xl border border-white/30 bg-white/10 px-7 py-4 text-base font-extrabold uppercase tracking-[0.14em] text-white backdrop-blur transition hover:bg-white/20"
-                >
-                  View Priorities
-                </a>
-                <a
-                  href="https://calendly.com/mchannon/10-minute-meeting"
-                  className="rounded-2xl border border-red-300/50 bg-red-700/20 px-7 py-4 text-base font-extrabold uppercase tracking-[0.14em] text-white backdrop-blur transition hover:bg-red-700/30"
-                >
-                  Tell Matt What You Think
-                </a>
-              </div>
-
-              <div className="mt-12 grid max-w-3xl gap-4 sm:grid-cols-3">
-                <div className="rounded-[1.75rem] border border-white/12 bg-white/10 px-5 py-5 backdrop-blur">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-200">Straight talk</div>
-                  <div className="mt-2 text-sm leading-6 text-slate-100">Clear language, practical thinking, and respect for the people footing the bill.</div>
-                </div>
-                <div className="rounded-[1.75rem] border border-white/12 bg-white/10 px-5 py-5 backdrop-blur">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-200">New Mexico first</div>
-                  <div className="mt-2 text-sm leading-6 text-slate-100">A campaign built around the needs of the state, not the comfort of insiders.</div>
-                </div>
-                <div className="rounded-[1.75rem] border border-white/12 bg-white/10 px-5 py-5 backdrop-blur">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-200">Built to solve</div>
-                  <div className="mt-2 text-sm leading-6 text-slate-100">Serious about accountability, growth, public trust, and getting results.</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="mx-auto w-full max-w-lg space-y-4 pt-2">
-              {/* KALH Video */}
-              <div className="overflow-hidden rounded-[2rem] border border-white/15 shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
-                <div className="border-b border-white/10 bg-white/10 px-5 py-3 backdrop-blur-md">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-200">KALH Radio Interview · 2026</div>
-                </div>
-                <div className="relative aspect-video w-full">
-                  <iframe
-                    className="absolute inset-0 h-full w-full"
-                    src="https://www.youtube.com/embed/ErTTNl4he14"
-                    title="Matt Channon — KALH Radio Interview, U.S. Senate Candidate New Mexico 2026"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-
-              {/* Press list — compact, between video and photo */}
-              <div className="rounded-[2rem] border border-white/15 bg-white/10 backdrop-blur-md px-5 py-2">
-                <div className="divide-y divide-white/10">
-                  <a href="https://www.abqjournal.com/opinion/opinion-talk-of-the-town/3038042" target="_blank" rel="noopener noreferrer"
-                    className="group block py-3 transition hover:opacity-80">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Albuquerque Journal</span>
-                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
-                    </div>
-                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">It's Time to Take Uncle Sam's Matches Away</div>
-                  </a>
-                  <a href="https://www.easternnewmexiconews.com/story/2026/05/20/voices/opinion-clovis-has-everything-except-the-jobs-community-deserves/233470.html" target="_blank" rel="noopener noreferrer"
-                    className="group block py-3 transition hover:opacity-80">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Eastern New Mexico News · Clovis</span>
-                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
-                    </div>
-                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">Clovis Has Everything Except the Jobs the Community Deserves</div>
-                  </a>
-                  <a href="https://www.lascrucesbulletin.com/stories/an-engineer-would-build-a-desalination-plant,168697" target="_blank" rel="noopener noreferrer"
-                    className="group block py-3 transition hover:opacity-80">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Las Cruces Bulletin</span>
-                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
-                    </div>
-                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">An Engineer Would Build a Desalination Plant</div>
-                  </a>
-                  <a href="https://www.rdrnews.com/opinion/editorials/new-mexico-deserves-a-republican-who-fights-back/article_da0da58a-1fd5-468c-8f73-b523003b401a.html" target="_blank" rel="noopener noreferrer"
-                    className="group block py-3 transition hover:opacity-80">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Roswell Daily Record</span>
-                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
-                    </div>
-                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Roswell)</span></div>
-                  </a>
-                  <a href="https://www.thechronicle-news.com/raton-pass-isnt-dying-its-waiting-for-the-right-senator/" target="_blank" rel="noopener noreferrer"
-                    className="group block py-3 transition hover:opacity-80">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Chronicle-News · Raton</span>
-                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
-                    </div>
-                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">Raton Pass Isn't Dying. It's Waiting for the Right Senator.</div>
-                  </a>
-                  <a href="https://2ndlifemediaalamogordo.town.news/g/alamogordo-nm/post/376066/new-mexico-deserves-republican-who-fights-back-matt-channon" target="_blank" rel="noopener noreferrer"
-                    className="group block py-3 transition hover:opacity-80">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/50">Alamogordo Town News</span>
-                      <span className="shrink-0 text-[10px] text-white/40">May 2026</span>
-                    </div>
-                    <div className="mt-0.5 text-[13px] font-bold text-white/90 group-hover:text-red-200 transition">New Mexico Deserves a Republican Who Fights Back <span className="font-normal text-white/40">(Alamogordo)</span></div>
-                  </a>
-                </div>
-              </div>
-
-              {/* Hackathon photo */}
-              <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 backdrop-blur-md">
-                <div className="border-b border-white/10 px-5 py-3">
-                  <div className="text-xs font-bold uppercase tracking-[0.22em] text-red-200">🥇 First Place · UNM Lobo Hackathon · 2025</div>
-                </div>
-                <img
-                  src="/breannamatt.png"
-                  alt="Matt Channon and Breanna Barna accepting the $5,000 first place award at the 2025 UNM Lobo Hackathon for ShredLeash"
-                  className="w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+  const [menuOpen,setMenuOpen] = useState(false);
+  const nav = [['The Film','#film'],['Support','#support'],['PACERgate','#pacergate'],['X Strike','#x-strike'],['About','#about']];
+  return <main id="top">
+    <div className="site-hero">
+      <div className="flag-backdrop" />
+      {SITE.senateOpeningVideo && <video className="opening-video" src={SITE.senateOpeningVideo} autoPlay muted loop playsInline aria-hidden="true" />}
+      <header className="site-header wrap">
+        <a className="wordmark" href="#top"><strong>MATT CHANNON</strong><small>NEW MEXICO · LIBERTY · ACCOUNTABILITY</small></a>
+        <button className="menu-toggle" aria-expanded={menuOpen} aria-controls="primary-nav" onClick={()=>setMenuOpen(v=>!v)}>{menuOpen?'Close':'Menu'} <span aria-hidden="true">☰</span></button>
+        <nav className={menuOpen?'open':''} id="primary-nav" aria-label="Primary navigation">{nav.map(([label,href])=><a key={href} href={href} onClick={()=>setMenuOpen(false)}>{label}</a>)}</nav>
+      </header>
+      <section className="hero-content wrap" aria-label="Introduction">
+        <span className="kicker">A personal story · A public record · A call for solidarity</span>
+        <h1>LIBERTY<br/><em>IS PERSONAL.</em></h1>
+        <p className="hero-intro">I’m an engineer, a dad, and an Albuquerque rideshare driver. In 2026, federal criminal proceedings changed my work, my family’s life, and my understanding of what it means to be free.</p>
+        <p className="hero-sub">Hear the recordings. Examine the evidence. Make up your own mind.</p>
+        <div className="hero-actions"><Arrow href="#film">Watch the story</Arrow><Arrow href="#support" secondary>Support Matt &amp; Quentin</Arrow></div>
+        <div className="hero-footnote">FROM THE CAMPAIGN TRAIL TO THE COURTROOM · ALBUQUERQUE, NEW MEXICO</div>
       </section>
-
-      <section id="about" className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-[2rem] bg-[#0b1a31] p-8 text-white shadow-xl">
-              <div className="text-sm font-bold uppercase tracking-[0.24em] text-red-300">Meet Matt</div>
-              <h2 className="mt-4 text-4xl font-black tracking-tight">Engineer. Inventor. Uber driver. Dad.</h2>
-              <p className="mt-6 text-lg leading-8 text-slate-100">
-                Matt Channon brings a direct style, an engineering mindset, and a builder's instinct for fixing what is broken. He believes public office should solve problems, serve citizens, and earn back the trust that government has squandered.
-              </p>
-              <p className="mt-5 text-lg leading-8 text-slate-100">
-                His campaign is rooted in the conviction that New Mexico can be safer, stronger, more productive, and better served by leaders who know how to build instead of merely posture.
-              </p>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-[2rem] bg-slate-50 p-8 shadow-sm ring-1 ring-slate-200">
-                <div className="text-sm font-bold uppercase tracking-[0.22em] text-blue-900">Independent judgment</div>
-                <p className="mt-4 leading-8 text-slate-700">
-                  This campaign is not built to flatter consultants, party gatekeepers, or legacy power centers. It is built to represent voters.
-                </p>
-              </div>
-              <div className="rounded-[2rem] bg-slate-50 p-8 shadow-sm ring-1 ring-slate-200">
-                <div className="text-sm font-bold uppercase tracking-[0.22em] text-blue-900">Real-world experience</div>
-                <p className="mt-4 leading-8 text-slate-700">
-                  Entrepreneurial and technical experience inform a practical approach to jobs, industry, infrastructure, and accountability.
-                </p>
-              </div>
-              <div className="rounded-[2rem] bg-slate-50 p-8 shadow-sm ring-1 ring-slate-200 md:col-span-2">
-                <div className="text-sm font-bold uppercase tracking-[0.22em] text-blue-900">A campaign with a clear point of view</div>
-                <p className="mt-4 text-lg leading-8 text-slate-700">
-                  New Mexico needs leadership that is candid, competent, and ready for the cleanup job ahead. Sooner or later, somebody has to clean up Washington. Do you trust the other guy to even pick up a hammer?
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="issues" className="bg-slate-100">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-          <div className="max-w-3xl">
-            <div className="text-sm font-bold uppercase tracking-[0.24em] text-red-700">Priorities</div>
-            <h2 className="mt-4 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">Fix What Is Broken</h2>
-            <p className="mt-6 text-lg leading-8 text-slate-700">
-              New Mexico needs law, order, rights protected, honest courts, and a government that remembers it answers to the people.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-            <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
-              <div className="mb-4 h-1.5 w-14 rounded-full bg-red-700" />
-              <h3 className="text-2xl font-black tracking-tight">Corrupt Officials Belong in Jail</h3>
-              <p className="mt-4 leading-8 text-slate-700">
-                Public office is not a license to loot, lie, or abuse power. Corrupt officials should be investigated, prosecuted, and punished.
-              </p>
-            </div>
-            <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
-              <div className="mb-4 h-1.5 w-14 rounded-full bg-blue-900" />
-              <h3 className="text-2xl font-black tracking-tight">Clean Up Our Courts</h3>
-              <p className="mt-4 leading-8 text-slate-700">
-                Courts exist to deliver justice, not shelter insiders, reward gamesmanship, or drift into institutional decay.
-              </p>
-            </div>
-            <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
-              <div className="mb-4 h-1.5 w-14 rounded-full bg-slate-900" />
-              <h3 className="text-2xl font-black tracking-tight">2nd Amendment Rights</h3>
-              <p className="mt-4 leading-8 text-slate-700">
-                Law-abiding citizens should not lose constitutional rights because Washington prefers symbolism over liberty and self-defense.
-              </p>
-            </div>
-            <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
-              <div className="mb-4 h-1.5 w-14 rounded-full bg-red-700" />
-              <h3 className="text-2xl font-black tracking-tight">Bring Back Law &amp; Order</h3>
-              <p className="mt-4 leading-8 text-slate-700">
-                Safe neighborhoods matter. Restore consequences, support public safety, and stop treating disorder like a permanent fact of life.
-              </p>
-            </div>
-            <div className="rounded-[2rem] bg-white p-8 shadow-sm ring-1 ring-slate-200">
-              <div className="mb-4 h-1.5 w-14 rounded-full bg-blue-900" />
-              <h3 className="text-2xl font-black tracking-tight">Answer to the People</h3>
-              <p className="mt-4 leading-8 text-slate-700">
-                Government should listen to constituents, not just donors, consultants, and insiders who think the public exists to be managed.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="movement" className="relative overflow-hidden bg-[#0a1730] text-white">
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(185,28,28,0.18),transparent_32%,transparent_68%,rgba(29,78,216,0.16))]" />
-        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-          <div className="grid gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-center">
-            <div>
-              <div className="text-sm font-bold uppercase tracking-[0.24em] text-red-200">Join the campaign</div>
-              <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">Help send a builder to Washington.</h2>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-100">
-                Add your name, stay informed, and help build a statewide effort to clean up the mess in Washington, restore honest government, and send someone who knows how to build instead of merely talk.
-              </p>
-            </div>
-
-            <div className="rounded-[2rem] border border-white/12 bg-white/10 p-8 shadow-2xl backdrop-blur">
-              <div className="text-2xl font-black tracking-tight">Get involved</div>
-              <p className="mt-3 text-base leading-7 text-slate-100">
-                Want to say what is working, what is broken, or what Washington keeps missing? Tell Matt what you think.
-              </p>
-              <div className="mt-6 grid gap-4 text-sm font-bold uppercase tracking-[0.14em] text-white/95 sm:grid-cols-2">
-                <div className="rounded-2xl bg-white/10 px-5 py-4">Volunteer</div>
-                <div className="rounded-2xl bg-white/10 px-5 py-4">County outreach</div>
-                <div className="rounded-2xl bg-white/10 px-5 py-4">Events</div>
-                <div className="rounded-2xl bg-white/10 px-5 py-4">Press inquiries</div>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="https://calendly.com/mchannon/10-minute-meeting"
-                  className="inline-flex rounded-2xl bg-red-700 px-6 py-3 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:-translate-y-0.5 hover:bg-red-600"
-                >
-                  Tell Matt What You Think
-                </a>
-                <a
-                  href="#top"
-                  className="inline-flex rounded-2xl border border-white/30 bg-white/10 px-6 py-3 text-sm font-black uppercase tracking-[0.14em] text-white transition hover:-translate-y-0.5 hover:bg-white/20"
-                >
-                  Stand with Matt
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <footer className="bg-slate-950 text-slate-300">
-        <div className="mx-auto max-w-7xl px-6 py-8 md:px-10">
-          <div className="flex flex-col gap-3 text-sm md:flex-row md:items-center md:justify-between">
-            <p>© MattChannon.com</p>
-            <p>Matt Channon for United States Senate — New Mexico</p>
-          </div>
-          <div className="mt-3 flex flex-col gap-2 text-xs uppercase tracking-[0.14em] text-slate-400 md:flex-row md:items-center md:justify-between">
-            <p>FEC Committee ID: C00947622</p>
-            <p>Paid for by Matt Channon for Senate</p>
-          </div>
-        </div>
-      </footer>
+      <div className="hero-stripe" />
     </div>
-  )
+
+    <section id="film" className="section film-section">
+      <div className="wrap film-grid">
+        <div>
+          <SectionHead eyebrow="The documentary" title="Why are the feds scared to death of a skirt?">A firsthand documentary featuring courtroom audio, investigative recordings, and the effects of prosecution on one New Mexico family.</SectionHead>
+          <div className="film-points"><p><b>Listen.</b> Hear officials discuss clothing, a gender marker, and detention.</p><p><b>Examine.</b> Consider the underlying documents and recorded interviews.</p><p><b>Decide.</b> The criminal proceedings remain ongoing, and some conclusions are disputed.</p></div>
+          <div className="button-row">{SITE.documentaryUrl?<Arrow href={SITE.documentaryUrl} external>Watch the documentary</Arrow>:<a className="action action-primary" href="#support">Explore the story <span aria-hidden="true">↗</span></a>}<a className="text-link" href="#record">About the source material →</a></div>
+        </div>
+        <div className="feature-media"><img src="/a_bold_graphic_thumbnail_a_solid_black_background.png" alt="The film's red-and-white typographic question about federal officials and a skirt"/><div className="media-tag">A FILM BUILT AROUND ORIGINAL RECORDINGS</div></div>
+      </div>
+    </section>
+
+    <section id="support" className="section support-section">
+      <div className="wrap support-grid">
+        <div className="support-copy"><span className="eyebrow gold">Support the family</span><h2>Not just a case number.<br/><em>A father and son.</em></h2><p>Months of monitoring and work restrictions have had consequences far beyond a federal courtroom. I’m trying to protect our home, keep working, and stay present for my son.</p><p>Whether you can contribute, share the film, or point others toward the original records, your support is welcome.</p>
+        <div className="button-row">{SITE.fundraiserUrl?<Arrow href={SITE.fundraiserUrl} external>Support Matt and Quentin</Arrow>:<a className="action action-primary" href="#get-involved">Ways to help <span aria-hidden="true">↗</span></a>}<a href="#film" className="subtle-link">See why I’m asking →</a></div>
+        {!SITE.fundraiserUrl && <p className="editor-note">Fundraising link will appear here when the public GoFundMe URL is added.</p>}
+        </div>
+        <div className="support-visual"><img src="/matt-channon.jpg" alt="Photograph of Matt Channon"/><div className="photo-caption">MATTHEW CHANNON · NEW MEXICO</div></div>
+      </div>
+    </section>
+
+    <section id="record" className="record-banner"><div className="wrap record-inner"><div><span className="eyebrow">Look for yourself</span><h2>Claims deserve scrutiny.<br/>So does government power.</h2></div><p>The film draws on courtroom recordings, recorded interviews, and case documents. This site will provide direct links to primary materials as they are prepared for public access, with claims and disputed interpretations clearly identified.</p></div></section>
+
+    <section id="pacergate" className="section pacergate-section"><div className="wrap pacer-grid"><div className="pacer-art"><img src="/a_highly_detailed_vintage_retro_billboard_scene.png" alt="Vintage PACERgate Volume 1 desert billboard with Route 66 shield, pink Edsel, and roadrunner" /></div><div><SectionHead eyebrow="Another documentary · Volume one" title="PACERgate" light>The fastest 66 minutes of your life. A visually inventive journey through federal court records and the American justice system.</SectionHead><p className="pacer-detail">The same curiosity, public records, and unmistakably New Mexican sensibility—this time with a pink Edsel and a roadrunner.</p>{SITE.pacergateUrl?<Arrow href={SITE.pacergateUrl} external>Watch PACERgate Vol. 1</Arrow>:<Arrow href="https://www.youtube.com/results?search_query=PACERgate+Volume+1" external>Search internet videos for PACERgate</Arrow>}</div></div></section>
+
+    <section id="x-strike" className="section strike-section"><div className="wrap strike-grid"><div><span className="eyebrow gold">A voluntary act of solidarity</span><h2>X MARKS<br/><em>MY SPOT.</em></h2><p className="strike-lead">None of the state's business.</p><p>The X Strike invites people who share that message to select an X gender marker on their driver’s license, where the option is available and appropriate for them.</p><p>It’s a peaceful way to question why a government-issued ID needs to announce anyone’s gender at all.</p><a className="action action-light" href="#get-involved">Learn how to take part <span aria-hidden="true">↗</span></a></div><div className="strike-mark" aria-label="The letter X">X<span>DECLINE TO BE DEFINED</span></div></div></section>
+
+    <section id="about" className="section about-section"><div className="wrap about-grid"><div><SectionHead eyebrow="Meet Matt" title="Engineer. Inventor. Uber driver. Dad.">I’ve spent much of my life building things, solving problems, and questioning systems that don’t work.</SectionHead><p>My background includes materials engineering, entrepreneurship, and years of work behind the wheel. In 2026, I ran for the United States Senate in New Mexico with a message about accountability, practical problem-solving, and public trust.</p><p>The Senate campaign is part of this story, not the homepage’s central purpose. Today, I’m focused on my family, the court record, and the public conversation about civil liberties.</p><div className="mini-credentials"><span>ENGINEERING</span><span>ENTREPRENEURSHIP</span><span>NEW MEXICO</span></div></div><div className="about-stack"><img src="/breannamatt.png" alt="Matt Channon and Breanna Barna at the 2025 UNM Lobo Hackathon award event"/><div className="stack-caption"><b>First place · UNM Lobo Hackathon · 2025</b><span>ShredLeash team · $5,000 award</span></div></div></div></section>
+
+    <section className="section archive-section"><div className="wrap archive-grid"><div><SectionHead eyebrow="From the archives" title="The 2026 Senate campaign">Preserving the original site's political work, reporting, and the voice of an unconventional New Mexico candidacy.</SectionHead><div className="senate-video"><iframe src={`https://www.youtube.com/embed/${SITE.senateInterviewId}`} title="Matt Channon's 2026 KALH radio interview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy" /></div><p className="video-caption">KALH Radio Interview · 2026</p></div><div className="archive-press"><h3>Published commentary</h3>{press.map(([outlet,title,url])=><a href={url} key={url} target="_blank" rel="noopener noreferrer"><span>{outlet}</span><b>{title}</b><span className="press-arrow">↗</span></a>)}</div></div></section>
+
+    <section id="get-involved" className="section involved-section"><div className="wrap involved-inner"><div><span className="eyebrow gold">Stay involved</span><h2>Help the story travel.</h2><p>Watch the documentary. Share the recordings. Visit the fundraising page when available. Consider joining the X Strike. Public attention begins with people willing to look.</p></div><div className="involved-actions"><a className="action action-primary" href="#film">Watch &amp; share the film <span aria-hidden="true">↗</span></a><a className="action action-secondary" href="#x-strike">Explore the X Strike <span aria-hidden="true">↗</span></a></div></div></section>
+
+    <footer className="footer"><div className="wrap footer-inner"><div><b>MATTCHANNON.COM</b><p>New Mexico · Public records · Personal liberty</p></div><div className="footer-links"><a href="#top">Back to top ↑</a><a href="#pacergate">PACERgate</a><a href="#support">Support</a></div></div><div className="wrap footer-small"><span>© 2026 Matt Channon</span><span>Historical campaign information: Matt Channon for U.S. Senate · FEC C00947622</span></div></footer>
+  </main>;
 }
