@@ -49,7 +49,7 @@ export default function App() {
             <h1>LIBERTY<br/><em>IS PERSONAL.</em></h1>
             <p className="hero-intro">I’m an engineer, a dad, and an Albuquerque rideshare driver. In 2026, federal criminal proceedings changed my work, my family’s life, and my understanding of what it means to be free.</p>
             <p className="hero-sub">Hear the recordings. Examine the evidence. Make up your own mind.</p>
-            <div className="hero-actions"><Arrow href="#film">Watch the story</Arrow><Arrow href={SITE.fundraiserUrl} external secondary>Support Matt &amp; Quentin</Arrow></div>
+            <div className="hero-actions"><Arrow href="#film">Watch the story</Arrow><Arrow href={SITE.fundraiserUrl} external secondary>Support Matt and his boy</Arrow></div>
           </div>
           <div className="hero-video-panel">
             <div className="hero-video-head">THE DOCUMENTARY <span>2026</span></div>
@@ -78,7 +78,7 @@ export default function App() {
     <section id="support" className="section support-section">
       <div className="wrap support-grid">
         <div className="support-copy"><span className="eyebrow gold">Support the family</span><h2>Not just a case number.<br/><em>A father and son.</em></h2><p>Months of monitoring and work restrictions have had consequences far beyond a federal courtroom. I’m trying to protect our home, keep working, and stay present for my son.</p><p>Whether you can contribute, share the film, or point others toward the original records, your support is welcome.</p>
-        <div className="button-row">{SITE.fundraiserUrl?<Arrow href={SITE.fundraiserUrl} external>Support Matt and Quentin</Arrow>:<a className="action action-primary" href="#get-involved">Ways to help <span aria-hidden="true">↗</span></a>}<a href="#film" className="subtle-link">See why I’m asking →</a></div>
+        <div className="button-row">{SITE.fundraiserUrl?<Arrow href={SITE.fundraiserUrl} external>Support Matt and his boy</Arrow>:<a className="action action-primary" href="#get-involved">Ways to help <span aria-hidden="true">↗</span></a>}<a href="#film" className="subtle-link">See why I’m asking →</a></div>
         {!SITE.fundraiserUrl && <p className="editor-note">Fundraising link will appear here when the public GoFundMe URL is added.</p>}
         </div>
         <div className="support-visual"><img src="/matt-channon.jpg" alt="Photograph of Matt Channon"/><div className="photo-caption">MATTHEW CHANNON · NEW MEXICO</div></div>
