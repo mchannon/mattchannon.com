@@ -6,6 +6,7 @@ import './index.css';
 const SITE = {
   documentaryUrl: 'https://www.youtube.com/watch?v=N8kS3udTGBs',
   fundraiserUrl: 'https://gofund.me/4464fc0d1', // direct campaign link
+  publicDocketUrl: 'https://www.courtlistener.com/docket/73285423/united-states-v-channon/',
   pacergateUrl: 'https://www.youtube.com/watch?v=qz3QtUBqFCw',
   senateOpeningVideo: '', // file in /public or a URL; optional, preserving the archival video below
   documentaryId: 'N8kS3udTGBs',
@@ -85,7 +86,7 @@ export default function App() {
       </div>
     </section>
 
-    <section id="record" className="record-banner"><div className="wrap record-inner"><div><span className="eyebrow">Look for yourself</span><h2>Claims deserve scrutiny.<br/>So does government power.</h2></div><p>The film draws on courtroom recordings, recorded interviews, and case documents. This site will provide direct links to primary materials as they are prepared for public access, with claims and disputed interpretations clearly identified.</p></div></section>
+    <section id="record" className="record-banner"><div className="wrap record-inner"><div><span className="eyebrow">Look for yourself</span><h2>Claims deserve scrutiny.<br/>So does government power.</h2></div><div className="record-copy"><p>The film draws on courtroom recordings, recorded interviews, and case documents. The public docket offers a way to follow the proceedings independently; the film presents my own account and interpretations.</p><a className="docket-link" href={SITE.publicDocketUrl} target="_blank" rel="noopener noreferrer" aria-label="View the public docket for United States v. Channon on CourtListener">View the public court docket <span aria-hidden="true">↗</span></a><span className="docket-note">United States v. Channon · Case No. 1:26-cr-02056 · CourtListener</span></div></div></section>
 
     <section id="pacergate" className="section pacergate-section"><div className="wrap pacer-grid"><a className="pacer-art" href={SITE.pacergateUrl} target="_blank" rel="noopener noreferrer" aria-label="Watch PACERgate Volume 1 on YouTube"><img src="/a_highly_detailed_vintage_retro_billboard_scene.png" alt="Vintage PACERgate Volume 1 desert billboard with Route 66 shield, pink Edsel, and roadrunner" /></a><div><SectionHead eyebrow="Another documentary · Volume one" title="PACERgate" light>The fastest 66 minutes of your life. A visually inventive journey through federal court records and the American justice system.</SectionHead><p className="pacer-detail">The same curiosity, public records, and unmistakably New Mexican sensibility—this time with a pink Edsel and a roadrunner.</p>{SITE.pacergateUrl?<Arrow href={SITE.pacergateUrl} external>Watch PACERgate Vol. 1</Arrow>:<Arrow href="https://www.youtube.com/results?search_query=PACERgate+Volume+1" external>Search internet videos for PACERgate</Arrow>}</div></div></section>
 

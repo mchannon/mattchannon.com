@@ -19,3 +19,10 @@
 .hero-video-caption{font-size:12px;color:#d5dce5;line-height:1.5;margin:0;padding:13px 16px}
 @media(max-width:900px){.hero-layout{grid-template-columns:1fr;gap:38px}.hero-video-panel{max-width:660px}.hero-content{padding-block:65px 70px}}
 @media(max-width:720px){.hero-content h1{font-size:clamp(55px,13vw,82px)}.hero-content{padding-block:55px 60px}.hero-footnote{margin-top:35px}}
+
+/* V5: unobtrusive primary-source link in the existing records strip. */
+.record-copy{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.record-copy p{margin:0 0 6px}
+.docket-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;line-height:1.5;font-weight:600;color:#8e2930;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+.docket-link:hover{color:#5e1921}
+.docket-note{font-size:11px;line-height:1.5;color:#687483}
