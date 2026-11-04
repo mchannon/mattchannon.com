@@ -57,7 +57,7 @@ export default function App() {
             <div className="hero-video-ratio">
               <iframe src={`https://www.youtube.com/embed/${SITE.documentaryId}`} title="Why Are the Feds Scared to Death of a Skirt? — Matt Channon" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
             </div>
-            <p className="hero-video-caption">Courtroom recordings, government interviews, and a firsthand account. The original KALH interview is preserved below.</p>
+            <p className="hero-video-caption">Original courtroom audio and recorded interviews tell the story of a federal prosecution—and its consequences for work, family, and personal liberty.</p>
           </div>
         </div>
         <div className="hero-footnote">FROM THE CAMPAIGN TRAIL TO THE COURTROOM · ALBUQUERQUE, NEW MEXICO</div>
