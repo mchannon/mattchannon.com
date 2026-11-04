@@ -48,7 +48,7 @@ export default function App() {
           <div className="hero-text">
             <span className="kicker">A personal story · A public record · A call for solidarity</span>
             <h1>LIBERTY<br/><em>IS PERSONAL.</em></h1>
-            <p className="hero-intro">I’m an engineer, a dad, and an Albuquerque rideshare driver. In 2026, federal criminal proceedings changed my work, my family’s life, and my understanding of what it means to be free.</p>
+            <p className="hero-intro">I’m an engineer, a dad, and an Albuquerque rideshare driver. From 2008-2026, federal criminal proceedings changed my work, my family’s life, and my understanding of what it means to be free.</p>
             <p className="hero-sub">Hear the recordings. Examine the evidence. Make up your own mind.</p>
             <div className="hero-actions"><Arrow href="#film">Watch the story</Arrow><Arrow href={SITE.fundraiserUrl} external secondary>Support Matt and his boy</Arrow></div>
           </div>
