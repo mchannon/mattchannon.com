@@ -4,11 +4,13 @@ import './index.css';
 /* Update these settings when the public links and original opening media are available.
    The source upload did not include an original cinematic opening asset. */
 const SITE = {
-  documentaryUrl: '', // e.g. https://www.youtube.com/watch?v=YOUR_VIDEO_ID
-  fundraiserUrl: '', // your actual GoFundMe address
-  pacergateUrl: '', // direct link to PACERgate Vol. 1
+  documentaryUrl: 'https://www.youtube.com/watch?v=N8kS3udTGBs',
+  fundraiserUrl: 'https://gofund.me/4464fc0d1', // direct campaign link
+  pacergateUrl: 'https://www.youtube.com/watch?v=qz3QtUBqFCw',
   senateOpeningVideo: '', // file in /public or a URL; optional, preserving the archival video below
-  senateInterviewId: 'ErTTNl4he14', // verified in the uploaded source
+  documentaryId: 'N8kS3udTGBs',
+  pacergateId: 'qz3QtUBqFCw',
+  senateInterviewId: 'ErTTNl4he14', // preserved from original homepage
 };
 
 const press = [
@@ -41,11 +43,22 @@ export default function App() {
         <nav className={menuOpen?'open':''} id="primary-nav" aria-label="Primary navigation">{nav.map(([label,href])=><a key={href} href={href} onClick={()=>setMenuOpen(false)}>{label}</a>)}</nav>
       </header>
       <section className="hero-content wrap" aria-label="Introduction">
-        <span className="kicker">A personal story · A public record · A call for solidarity</span>
-        <h1>LIBERTY<br/><em>IS PERSONAL.</em></h1>
-        <p className="hero-intro">I’m an engineer, a dad, and an Albuquerque rideshare driver. In 2026, federal criminal proceedings changed my work, my family’s life, and my understanding of what it means to be free.</p>
-        <p className="hero-sub">Hear the recordings. Examine the evidence. Make up your own mind.</p>
-        <div className="hero-actions"><Arrow href="#film">Watch the story</Arrow><Arrow href="#support" secondary>Support Matt &amp; Quentin</Arrow></div>
+        <div className="hero-layout">
+          <div className="hero-text">
+            <span className="kicker">A personal story · A public record · A call for solidarity</span>
+            <h1>LIBERTY<br/><em>IS PERSONAL.</em></h1>
+            <p className="hero-intro">I’m an engineer, a dad, and an Albuquerque rideshare driver. In 2026, federal criminal proceedings changed my work, my family’s life, and my understanding of what it means to be free.</p>
+            <p className="hero-sub">Hear the recordings. Examine the evidence. Make up your own mind.</p>
+            <div className="hero-actions"><Arrow href="#film">Watch the story</Arrow><Arrow href={SITE.fundraiserUrl} external secondary>Support Matt &amp; Quentin</Arrow></div>
+          </div>
+          <div className="hero-video-panel">
+            <div className="hero-video-head">THE DOCUMENTARY <span>2026</span></div>
+            <div className="hero-video-ratio">
+              <iframe src={`https://www.youtube.com/embed/${SITE.documentaryId}`} title="Why Are the Feds Scared to Death of a Skirt? — Matt Channon" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+            </div>
+            <p className="hero-video-caption">Courtroom recordings, government interviews, and a firsthand account. The original KALH interview is preserved below.</p>
+          </div>
+        </div>
         <div className="hero-footnote">FROM THE CAMPAIGN TRAIL TO THE COURTROOM · ALBUQUERQUE, NEW MEXICO</div>
       </section>
       <div className="hero-stripe" />
@@ -58,7 +71,7 @@ export default function App() {
           <div className="film-points"><p><b>Listen.</b> Hear officials discuss clothing, a gender marker, and detention.</p><p><b>Examine.</b> Consider the underlying documents and recorded interviews.</p><p><b>Decide.</b> The criminal proceedings remain ongoing, and some conclusions are disputed.</p></div>
           <div className="button-row">{SITE.documentaryUrl?<Arrow href={SITE.documentaryUrl} external>Watch the documentary</Arrow>:<a className="action action-primary" href="#support">Explore the story <span aria-hidden="true">↗</span></a>}<a className="text-link" href="#record">About the source material →</a></div>
         </div>
-        <div className="feature-media"><img src="/a_bold_graphic_thumbnail_a_solid_black_background.png" alt="The film's red-and-white typographic question about federal officials and a skirt"/><div className="media-tag">A FILM BUILT AROUND ORIGINAL RECORDINGS</div></div>
+        <a className="feature-media" href={SITE.documentaryUrl} target="_blank" rel="noopener noreferrer" aria-label="Watch Why Are the Feds Scared to Death of a Skirt? on YouTube"><img src="/a_bold_graphic_thumbnail_a_solid_black_background.png" alt="The film's red-and-white typographic question about federal officials and a skirt"/><div className="media-tag">WATCH THE ORIGINAL RECORDINGS ↗</div></a>
       </div>
     </section>
 
@@ -74,7 +87,7 @@ export default function App() {
 
     <section id="record" className="record-banner"><div className="wrap record-inner"><div><span className="eyebrow">Look for yourself</span><h2>Claims deserve scrutiny.<br/>So does government power.</h2></div><p>The film draws on courtroom recordings, recorded interviews, and case documents. This site will provide direct links to primary materials as they are prepared for public access, with claims and disputed interpretations clearly identified.</p></div></section>
 
-    <section id="pacergate" className="section pacergate-section"><div className="wrap pacer-grid"><div className="pacer-art"><img src="/a_highly_detailed_vintage_retro_billboard_scene.png" alt="Vintage PACERgate Volume 1 desert billboard with Route 66 shield, pink Edsel, and roadrunner" /></div><div><SectionHead eyebrow="Another documentary · Volume one" title="PACERgate" light>The fastest 66 minutes of your life. A visually inventive journey through federal court records and the American justice system.</SectionHead><p className="pacer-detail">The same curiosity, public records, and unmistakably New Mexican sensibility—this time with a pink Edsel and a roadrunner.</p>{SITE.pacergateUrl?<Arrow href={SITE.pacergateUrl} external>Watch PACERgate Vol. 1</Arrow>:<Arrow href="https://www.youtube.com/results?search_query=PACERgate+Volume+1" external>Search internet videos for PACERgate</Arrow>}</div></div></section>
+    <section id="pacergate" className="section pacergate-section"><div className="wrap pacer-grid"><a className="pacer-art" href={SITE.pacergateUrl} target="_blank" rel="noopener noreferrer" aria-label="Watch PACERgate Volume 1 on YouTube"><img src="/a_highly_detailed_vintage_retro_billboard_scene.png" alt="Vintage PACERgate Volume 1 desert billboard with Route 66 shield, pink Edsel, and roadrunner" /></a><div><SectionHead eyebrow="Another documentary · Volume one" title="PACERgate" light>The fastest 66 minutes of your life. A visually inventive journey through federal court records and the American justice system.</SectionHead><p className="pacer-detail">The same curiosity, public records, and unmistakably New Mexican sensibility—this time with a pink Edsel and a roadrunner.</p>{SITE.pacergateUrl?<Arrow href={SITE.pacergateUrl} external>Watch PACERgate Vol. 1</Arrow>:<Arrow href="https://www.youtube.com/results?search_query=PACERgate+Volume+1" external>Search internet videos for PACERgate</Arrow>}</div></div></section>
 
     <section id="x-strike" className="section strike-section"><div className="wrap strike-grid"><div><span className="eyebrow gold">A voluntary act of solidarity</span><h2>X MARKS<br/><em>MY SPOT.</em></h2><p className="strike-lead">None of the state's business.</p><p>The X Strike invites people who share that message to select an X gender marker on their driver’s license, where the option is available and appropriate for them.</p><p>It’s a peaceful way to question why a government-issued ID needs to announce anyone’s gender at all.</p><a className="action action-light" href="#get-involved">Learn how to take part <span aria-hidden="true">↗</span></a></div><div className="strike-mark" aria-label="The letter X">X<span>DECLINE TO BE DEFINED</span></div></div></section>
 
@@ -82,7 +95,7 @@ export default function App() {
 
     <section className="section archive-section"><div className="wrap archive-grid"><div><SectionHead eyebrow="From the archives" title="The 2026 Senate campaign">Preserving the original site's political work, reporting, and the voice of an unconventional New Mexico candidacy.</SectionHead><div className="senate-video"><iframe src={`https://www.youtube.com/embed/${SITE.senateInterviewId}`} title="Matt Channon's 2026 KALH radio interview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="lazy" /></div><p className="video-caption">KALH Radio Interview · 2026</p></div><div className="archive-press"><h3>Published commentary</h3>{press.map(([outlet,title,url])=><a href={url} key={url} target="_blank" rel="noopener noreferrer"><span>{outlet}</span><b>{title}</b><span className="press-arrow">↗</span></a>)}</div></div></section>
 
-    <section id="get-involved" className="section involved-section"><div className="wrap involved-inner"><div><span className="eyebrow gold">Stay involved</span><h2>Help the story travel.</h2><p>Watch the documentary. Share the recordings. Visit the fundraising page when available. Consider joining the X Strike. Public attention begins with people willing to look.</p></div><div className="involved-actions"><a className="action action-primary" href="#film">Watch &amp; share the film <span aria-hidden="true">↗</span></a><a className="action action-secondary" href="#x-strike">Explore the X Strike <span aria-hidden="true">↗</span></a></div></div></section>
+    <section id="get-involved" className="section involved-section"><div className="wrap involved-inner"><div><span className="eyebrow gold">Stay involved</span><h2>Help the story travel.</h2><p>Watch the documentary. Share the recordings. Support the family through the fundraiser. Consider joining the X Strike. Public attention begins with people willing to look.</p></div><div className="involved-actions"><Arrow href={SITE.fundraiserUrl} external>Contribute on GoFundMe</Arrow><a className="action action-secondary" href={SITE.documentaryUrl} target="_blank" rel="noopener noreferrer">Watch &amp; share the film <span aria-hidden="true">↗</span></a><a className="action action-secondary" href="#x-strike">Explore the X Strike <span aria-hidden="true">↗</span></a></div></div></section>
 
     <footer className="footer"><div className="wrap footer-inner"><div><b>MATTCHANNON.COM</b><p>New Mexico · Public records · Personal liberty</p></div><div className="footer-links"><a href="#top">Back to top ↑</a><a href="#pacergate">PACERgate</a><a href="#support">Support</a></div></div><div className="wrap footer-small"><span>© 2026 Matt Channon</span><span>Historical campaign information: Matt Channon for U.S. Senate · FEC C00947622</span></div></footer>
   </main>;
